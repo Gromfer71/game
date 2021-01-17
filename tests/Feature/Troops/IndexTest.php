@@ -16,18 +16,6 @@ class IndexTest extends TestCase
         parent::setUp();
         Auth::login(User::factory()->create());
     }
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
     /**
      * A basic feature test example.
      *
