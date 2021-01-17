@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Models\Message;
 use App\Models\SystemMessage;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -62,7 +61,6 @@ class UITest extends TestCase
         $message = SystemMessage::factory()->create(['to' => Auth::user()->id]);
         $this->check('systemMessages.show', 'auth.mail.system_message_show', ['message', 'items'], $message->id);
     }
-
 
 
 }
