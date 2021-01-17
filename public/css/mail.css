@@ -1,0 +1,25 @@
+.ui_back {
+    background: url("../img/mail_bg.png") repeat;
+    height: 600px;
+    padding: 10px;
+}
+.mail__item {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.mail__go {
+    display: block;
+    position: relative;
+    left: 100px;
+}
+.mail__title {
+    color: #000;
+    font-weight: 1000;
+    font-size: 26px;
+}
+.mail__item:hover {
+    box-shadow: 0 0 5px #38c172;
+}
+

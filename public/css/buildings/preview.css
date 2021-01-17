@@ -1,0 +1,29 @@
+.upgrade_time
+{
+    width: 220px;
+    height: 75px;
+    position: relative;
+    left: -500px;
+    top: 160px;
+    border-bottom: 2px solid #fff8b3;
+    border-top: 2px solid #fff8b3;
+    padding: 10px;
+    font-size: 24px;
+    color: #a1cbef;
+}
+.btn__upgrade {
+
+    position: relative;
+    background: url("../../img/btn_green.png") no-repeat;
+    background-size: 150px;
+    height: 74px;
+    display: block;
+    left: -450px;
+    top: 190px;
+    padding-top: 15px;
+    width: 150px;
+    font-size: 14px;
+    text-align: center;
+    color: #a1cbef;
+    font-weight: 700;
+}

@@ -1,0 +1,47 @@
+.mail__content {
+    background: url("../img/mail_bg.png") repeat;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.dialog__item {
+    height: 100px;
+}
+.mail__icon {
+    position: relative;
+    vertical-align: center;
+
+}
+.mail__from {
+    position: relative;
+    left: 75px;
+    top: -65px;
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+}
+.mail__message {
+    position: relative;
+    top: -65px;
+    left: 100px;
+
+    width: 400px;
+    height: 50px;
+    font-size: 16px;
+    color: #6c757d;
+}
+.message__date {
+    position: relative;
+    top: -135px;
+    left: 400px;
+}
+hr {
+    display: block;
+    position: relative;
+    top: -70px;
+    border: 0;
+    clear:both;
+    width: 96%;
+    background-color:#FFFF00;
+    height: 1px;
+}

@@ -1,0 +1,33 @@
+.bg {
+
+}
+.short {
+    width: 70%;
+}
+.content__links {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.links__item {
+    text-align: center;
+    padding: 15px;
+    position: relative;
+
+}
+.btn_link {
+    max-width: 120px;
+    margin-left: 20px;
+}
+ .btn {
+    position: relative;
+    display: block;
+    color: red;
+    top: -50px;
+    left: 25px;
+    max-width: 130px;
+    margin-left: 20px;
+     padding-top: 5px;
+}
+

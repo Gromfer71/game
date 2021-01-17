@@ -1,0 +1,71 @@
+.ui_back {
+    background: url("../../img/mail_bg.png") repeat;
+    height: 650px;
+    padding: 10px;
+    color: #191c27;
+    font-size: 24px;
+}
+.ui_back img {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.b_desc {
+    position: relative;
+    display: block;
+    margin: 50px;
+    top: -220px;
+}
+.building__prop {
+    position: absolute;
+    top: 350px;
+    color: #fff8b3;
+    font-size: 24px;
+    margin: 0 auto;
+}
+.prop {
+    position: absolute;
+    margin: 20px;
+    top: 10px;
+    margin-left: 50px;
+}
+.prop__item {
+    width: 400px;
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+#details {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 3px solid #fff8b3;
+    height: 600px;
+    visibility: hidden;
+
+}
+
+#toggle {
+    display: block;
+    margin: 20px auto;
+
+}
+.details__item {
+
+    display: inline-flex;
+    justify-content: space-between;
+}
+.upgrade_time
+{
+    width: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 2px solid #fff8b3;
+    border-top: 2px solid #fff8b3;
+    padding: 10px;
+    font-size: 18px;
+    color: #a1cbef;
+
+}

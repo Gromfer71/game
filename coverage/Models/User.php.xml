@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="User.php" path="\Models">
+    <totals>
+      <lines total="101" comments="61" code="40" executable="3" executed="1" percent="33.33"/>
+      <methods count="3" tested="1" percent="33.33"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Models\User" start="56" executable="3" executed="1" crap="5.67">
+      <namespace name="App\Models"/>
+      <method name="incomingMessages" signature="incomingMessages()" start="87" end="90" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="outgoingMessages" signature="outgoingMessages()" start="92" end="95" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="userBuildings" signature="userBuildings()" start="97" end="100" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="99">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Illuminate</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Contracts</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Auth</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">MustVerifyEmail</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Illuminate</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Database</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Eloquent</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Factories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">HasFactory</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Illuminate</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Foundation</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Auth</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">User</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_AS">as</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Authenticatable</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Illuminate</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Notifications</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Notifiable</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="9"/>
+      <line no="10">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="11">
+        <token name="T_DOC_COMMENT"> * App\Models\User</token>
+      </line>
+      <line no="12">
+        <token name="T_DOC_COMMENT"> *</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT"> * @property int $id</token>
+      </line>
+      <line no="14">
+        <token name="T_DOC_COMMENT"> * @property string $login</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT"> * @property string $password</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT"> * @property int $food</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT"> * @property int $wood</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT"> * @property int $iron</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT"> * @property int $mithril</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT"> * @property int $is_online</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT"> * @property string|null $last_active</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT"> * @property string|null $last_check</token>
+      </line>
+      <line no="23">
+        <token name="T_DOC_COMMENT"> * @property int $max_building_upgrades</token>
+      </line>
+      <line no="24">
+        <token name="T_DOC_COMMENT"> * @property string|null $remember_token</token>
+      </line>
+      <line no="25">
+        <token name="T_DOC_COMMENT"> * @property \Illuminate\Support\Carbon|null $created_at</token>
+      </line>
+      <line no="26">
+        <token name="T_DOC_COMMENT"> * @property \Illuminate\Support\Carbon|null $updated_at</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT"> * @property string|null $deleted_at</token>
+      </line>
+      <line no="28">
+        <token name="T_DOC_COMMENT"> * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Message[] $incomingMessages</token>
+      </line>
+      <line no="29">
+        <token name="T_DOC_COMMENT"> * @property-read int|null $incoming_messages_count</token>
+      </line>
+      <line no="30">
+        <token name="T_DOC_COMMENT"> * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications</token>
+      </line>
+      <line no="31">
+        <token name="T_DOC_COMMENT"> * @property-read int|null $notifications_count</token>
+      </line>
+      <line no="32">
+        <token name="T_DOC_COMMENT"> * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Message[] $outgoingMessages</token>
+      </line>
+      <line no="33">
+        <token name="T_DOC_COMMENT"> * @property-read int|null $outgoing_messages_count</token>
+      </line>
+      <line no="34">
+        <token name="T_DOC_COMMENT"> * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\UserBuilding[] $userBuildings</token>
+      </line>
+      <line no="35">
+        <token name="T_DOC_COMMENT"> * @property-read int|null $user_buildings_count</token>
+      </line>
+      <line no="36">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()</token>
+      </line>
+      <line no="37">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()</token>
+      </line>
+      <line no="38">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User query()</token>
+      </line>
+      <line no="39">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)</token>
+      </line>
+      <line no="40">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)</token>
+      </line>
+      <line no="41">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereFood($value)</token>
+      </line>
+      <line no="42">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)</token>
+      </line>
+      <line no="43">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereIron($value)</token>
+      </line>
+      <line no="44">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereIsOnline($value)</token>
+      </line>
+      <line no="45">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereLastActive($value)</token>
+      </line>
+      <line no="46">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereLastCheck($value)</token>
+      </line>
+      <line no="47">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereLogin($value)</token>
+      </line>
+      <line no="48">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereMaxBuildingUpgrades($value)</token>
+      </line>
+      <line no="49">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereMithril($value)</token>
+      </line>
+      <line no="50">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)</token>
+      </line>
+      <line no="51">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)</token>
+      </line>
+      <line no="52">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)</token>
+      </line>
+      <line no="53">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|User whereWood($value)</token>
+      </line>
+      <line no="54">
+        <token name="T_DOC_COMMENT"> * @mixin \Eloquent</token>
+      </line>
+      <line no="55">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="56">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">User</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXTENDS">extends</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Authenticatable</token>
+      </line>
+      <line no="57">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">HasFactory</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Notifiable</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="59"/>
+      <line no="60">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="61">
+        <token name="T_DOC_COMMENT">     * The attributes that are mass assignable.</token>
+      </line>
+      <line no="62">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="63">
+        <token name="T_DOC_COMMENT">     * @var array</token>
+      </line>
+      <line no="64">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="65">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$fillable</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="66">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'login'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'is_online'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'last_active'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="67">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="69">
+        <token name="T_DOC_COMMENT">     * The attributes that should be hidden for arrays.</token>
+      </line>
+      <line no="70">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="71">
+        <token name="T_DOC_COMMENT">     * @var array</token>
+      </line>
+      <line no="72">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="73">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$hidden</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="74">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="75">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'remember_token'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="76">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="77"/>
+      <line no="78">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="79">
+        <token name="T_DOC_COMMENT">     * The attributes that should be cast to native types.</token>
+      </line>
+      <line no="80">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="81">
+        <token name="T_DOC_COMMENT">     * @var array</token>
+      </line>
+      <line no="82">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="83">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$casts</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="84">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email_verified_at'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'datetime'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="85">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="86"/>
+      <line no="87">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">incomingMessages</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="88">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="89">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">hasMany</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Message</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'to'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="90">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="91"/>
+      <line no="92">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">outgoingMessages</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="93">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="94">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">hasMany</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Message</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'from'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="95">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="96"/>
+      <line no="97">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">userBuildings</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="98">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="99">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">hasMany</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserBuilding</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'user_id'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="100">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="101">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="102"/>
+    </source>
+  </file>
+</phpunit>

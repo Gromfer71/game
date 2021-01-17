@@ -1,0 +1,64 @@
+.ui_back {
+    background: url("../../img/mail_bg.png") repeat;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    position: relative;
+}
+.title {
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.title:after {
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 0 auto;
+    width: 300px;
+    border-bottom: 2px solid #3495e3;
+}
+.polotno {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+
+}
+.res {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+}
+.res__box {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+
+    vertical-align: center;
+    display: flex;
+}
+.submit_upgrade {
+    display: block;
+    background: url("../../img/btn_brown.png") no-repeat;
+    background-size: 200px;
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #3495e3;
+    font-weight: 800;
+}
+.upgrade_time
+{
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    top: 90px;
+    border-bottom: 2px solid #fff8b3;
+    border-top: 2px solid #fff8b3;
+    padding: 10px;
+    font-size: 18px;
+    color: #a1cbef;
+
+}

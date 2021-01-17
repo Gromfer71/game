@@ -1,0 +1,145 @@
+html {
+    height: 100%;
+    background: radial-gradient(at 50% 0, #e9d7ab, rgba(233, 215, 171, 0)) no-repeat border-box #f78f01;
+    background-size: 100% 50%;
+}
+
+input[type="range"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid 0 transparent;
+    border-width: 0 2em;
+    padding: 0 0 3.5em;
+    width: 30em;
+    height: 4em;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    background-size: 0.82027em 1.3125em;
+    filter: drop-shadow(0 0 0.125em #5f3900);
+    font-size: 1em;
+    cursor: pointer;
+}
+input[type="range"], input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    border: solid 1px #da974e;
+    width: 30em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    background: linear-gradient(90deg, #da974e 0.125em, rgba(0, 0, 0, 0) 0.125em) -1px 0 border-box #f5f8eb;
+    background-size: 5em 100%;
+}
+input[type="range"]::-moz-range-track {
+    box-sizing: border-box;
+    border: solid 1px #da974e;
+    width: 30em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    background: linear-gradient(90deg, #da974e 0.125em, rgba(0, 0, 0, 0) 0.125em) -1px 0 border-box #f5f8eb;
+    background-size: 5em 100%;
+}
+input[type="range"]::-ms-track {
+    box-sizing: border-box;
+    border: solid 1px #da974e;
+    width: 30em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    background: linear-gradient(90deg, #da974e 0.125em, rgba(0, 0, 0, 0) 0.125em) -1px 0 border-box #f5f8eb;
+    background-size: 5em 100%;
+    color: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    margin-top: -2.25em;
+    box-sizing: border-box;
+    border: solid 1.5em transparent;
+    width: 5em;
+    height: 5em;
+    border-radius: 1.875em;
+    transform: translateY(-0.25em) rotate(30deg) skewY(30deg) scaleX(0.86603);
+    box-shadow: inset -1px -1px #3a3534;
+    background: linear-gradient(-45deg, #3a3534 20%, #60858a 50%, #3a3534 50%, #3a3534 calc(50% + 1px), rgba(0, 0, 0, 0) calc(50% + 1px)) no-repeat content-box;
+    filter: drop-shadow(0 0 #3a3534);
+}
+input[type="range"]::-moz-range-thumb {
+    box-sizing: border-box;
+    border: solid 1.5em transparent;
+    width: 5em;
+    height: 5em;
+    border-radius: 1.875em;
+    transform: translateY(-0.25em) rotate(30deg) skewY(30deg) scaleX(0.86603);
+    box-shadow: inset -1px -1px #3a3534;
+    background: linear-gradient(-45deg, #3a3534 20%, #60858a 50%, #3a3534 50%, #3a3534 calc(50% + 1px), rgba(0, 0, 0, 0) calc(50% + 1px)) no-repeat content-box;
+    filter: drop-shadow(0 0 #3a3534);
+}
+input[type="range"]::-ms-thumb {
+    box-sizing: border-box;
+    border: solid 1.5em transparent;
+    width: 5em;
+    height: 5em;
+    border-radius: 1.875em;
+    transform: translateY(-0.25em) rotate(30deg) skewY(30deg) scaleX(0.86603);
+    box-shadow: inset -1px -1px #3a3534;
+    background: linear-gradient(-45deg, #3a3534 20%, #60858a 50%, #3a3534 50%, #3a3534 52%, rgba(0, 0, 0, 0) 52%) no-repeat content-box;
+    filter: drop-shadow(0 0 #3a3534);
+}
+input[type="range"]::-ms-fill-lower, input[type="range"]::-ms-tooltip {
+    display: none;
+}
+input[type="range"]::-webkit-slider-thumb:before,
+input[type="range"] /deep/ #thumb:before {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform: scaleX(1.1547) skewY(-30deg) rotate(-30deg) translateY(37%);
+    background: linear-gradient(#ffffff, #ffffff) no-repeat 50% 20%, radial-gradient(circle, rgba(0, 0, 0, 0) 0.25em, #ffffff 0.25em, #ffffff 0.375em, rgba(0, 0, 0, 0) 0.375em) no-repeat;
+    background-size: 0.125em 25%, 100% 86%;
+    filter: blur(1px);
+    content: "";
+}
+.js input[type="range"][value="1"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+.js input[type="range"][value="2"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+.js input[type="range"][value="3"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+.js input[type="range"][value="4"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+.js input[type="range"][value="5"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #d1d0d4 25%, #d1d0d4 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #f1e7e7 25%, #f1e7e7 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #e8dddd 25%, #e8dddd 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+.js input[type="range"][value="6"] {
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 2.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 1.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 7.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 6.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 12.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 11.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 17.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 16.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 22.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 21.74223em 4.5em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #8cd60d 25%, #8cd60d 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.9375em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #7cc600 25%, #7cc600 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.9375em, linear-gradient(30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 27.5em 4.5em, linear-gradient(-30deg, rgba(0, 0, 0, 0) 25%, #adce32 25%, #adce32 75%, rgba(0, 0, 0, 0) 75%) 26.74223em 4.5em;
+    background-repeat: no-repeat;
+    /* Chrome needs the 1px correction */
+    background-size: 0.82027em 1.3125em;
+}
+input[type="range"]:focus {
+    outline: none;
+    opacity: 0.99;
+}

@@ -1,0 +1,770 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="UpdateUser.php" path="\Http\Middleware">
+    <totals>
+      <lines total="76" comments="11" code="65" executable="22" executed="9" percent="40.91"/>
+      <methods count="1" tested="0" percent="0.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Http\Middleware\UpdateUser" start="23" executable="22" executed="9" crap="7.3">
+      <namespace name="App\Http\Middleware"/>
+      <method name="handle" signature="handle($request, Closure $next)" start="32" end="74" crap="7.30" executable="22" executed="9" coverage="40.909090909091"/>
+    </class>
+    <coverage>
+      <line nr="35">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="37">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="39">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="41">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="43">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="45">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="47">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="48">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+      <line nr="73">
+        <covered by="Tests\Feature\LogoutTest::test_example"/>
+        <covered by="Tests\Feature\MessageTest::success_send"/>
+        <covered by="Tests\Feature\MessageTest::existing_in_database"/>
+        <covered by="Tests\Feature\MessageTest::not_existing_invalid_message"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send"/>
+        <covered by="Tests\Feature\MessageTest::null_user_send2"/>
+        <covered by="Tests\Feature\MessageTest::empty_message"/>
+        <covered by="Tests\Feature\MessageTest::very_large_message"/>
+        <covered by="Tests\Feature\MessageTest::send_message_to_self"/>
+        <covered by="Tests\Feature\UITest::home_page"/>
+        <covered by="Tests\Feature\UITest::show_online"/>
+        <covered by="Tests\Feature\UITest::mail_main"/>
+        <covered by="Tests\Feature\UITest::dialogs"/>
+        <covered by="Tests\Feature\UITest::dialog"/>
+        <covered by="Tests\Feature\UITest::systemMessages"/>
+        <covered by="Tests\Feature\UITest::showSystemMessage"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Http</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Middleware</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">BaseTroop</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">TrainTroop</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Troop</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repositories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Read</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ReadBuildingRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="9">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repositories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Read</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ReadMessageRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repositories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Read</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ReadUserRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="11">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repositories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Write</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">WriteBuildingRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="12">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repositories</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Write</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">WriteUserRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="13">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Services</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">BuildingsHandler</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="14">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Services</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">MailHandler</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="15">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Services</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">UserHandler</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="16">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Closure</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="17"/>
+      <line no="18">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT"> * Class UpdateUser</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT"> *</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT"> * @package App\Http\Middleware</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="23">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UpdateUser</token>
+      </line>
+      <line no="24">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="25"/>
+      <line no="26">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT">     * @param            $request</token>
+      </line>
+      <line no="28">
+        <token name="T_DOC_COMMENT">     * @param  \Closure  $next</token>
+      </line>
+      <line no="29">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="30">
+        <token name="T_DOC_COMMENT">     * @return mixed</token>
+      </line>
+      <line no="31">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">handle</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Closure</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$next</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_COMMENT">// &#x434;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x430; &#x43F;&#x43E;&#x434;&#x430;&#x440;&#x43A;&#x430;</token>
+      </line>
+      <line no="35">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_STRING">app</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">MailHandler</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">EverydayGift</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COALESCE">??</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">abort</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_LNUMBER">500</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'&#x415;&#x436;&#x435;&#x434;&#x43D;&#x435;&#x432;&#x43D;&#x44B;&#x439; &#x43F;&#x43E;&#x434;&#x430;&#x440;&#x43E;&#x43A; &#x434;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x43D;&#x435; &#x443;&#x434;&#x430;&#x43B;&#x43E;&#x441;&#x44C;.'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="36">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_COMMENT">// &#x43E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x43D;&#x43B;&#x430;&#x439;&#x43D;&#x430;</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_STRING">app</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">WriteUserRepository</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">updateLastActive</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_COMMENT">// &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x430; &#x437;&#x434;&#x430;&#x43D;&#x438;&#x439; &#x43D;&#x430; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x443;&#x43B;&#x443;&#x447;&#x448;&#x435;&#x43D;&#x438;&#x44F;/&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x438;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_STRING">app</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">BuildingsHandler</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">checkBuildings</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="40">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_COMMENT">// &#x43D;&#x430;&#x447;&#x438;&#x441;&#x43B;&#x44F;&#x435;&#x43C; &#x44E;&#x437;&#x435;&#x440;&#x443; &#x440;&#x435;&#x441;&#x443;&#x440;&#x441;&#x44B;</token>
+      </line>
+      <line no="41">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_STRING">app</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">UserHandler</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">addUserResources</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="42"/>
+      <line no="43">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">TrainTroop</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">where</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="44">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="45">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'user_id'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ReadUserRepository</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">getCurrentUser</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">id</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="46">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+      </line>
+      <line no="47">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">first</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="48">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_NOT_EQUAL">!=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="49">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">train_time</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LT">&lt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">time</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_VARIABLE">$troop</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Troop</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">where</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="51">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="52">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'user_id'</token>
+        <token name="T_WHITESPACE">  </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ReadUserRepository</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">getCurrentUser</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">id</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'category'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">category</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="54">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'lv'</token>
+        <token name="T_WHITESPACE">       </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">lv</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="55">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+      </line>
+      <line no="56">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">first</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="57">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$troop</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_NOT_EQUAL">!=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_VARIABLE">$troop</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">count</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PLUS_EQUAL">+=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">count</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="59">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_COMMENT">//$train-&gt;destroy();</token>
+      </line>
+      <line no="60">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ELSE">else</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="61">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_STRING">Troop</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">create</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="62">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="63">
+        <token name="T_WHITESPACE">                            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'user_id'</token>
+        <token name="T_WHITESPACE">  </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ReadUserRepository</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">getCurrentUser</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">id</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="64">
+        <token name="T_WHITESPACE">                            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'category'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">BaseTroop</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">find</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">troop_id</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">category</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="65">
+        <token name="T_WHITESPACE">                            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'lv'</token>
+        <token name="T_WHITESPACE">       </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">BaseTroop</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">find</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">troop_id</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">lv</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="66">
+        <token name="T_WHITESPACE">                            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'count'</token>
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$train</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">count</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="67">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="69">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="70">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="71">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="72"/>
+      <line no="73">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$next</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="74">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="75"/>
+      <line no="76">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="77"/>
+    </source>
+  </file>
+</phpunit>

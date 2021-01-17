@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="Message.php" path="\Models">
+    <totals>
+      <lines total="39" comments="27" code="12" executable="0" executed="0" percent="0"/>
+      <methods count="0" tested="0" percent="0"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="0" tested="0" percent="0"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Models\Message" start="34" executable="0" executed="0" crap="0">
+      <namespace name="App\Models"/>
+    </class>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php </token>
+        <token name="T_DECLARE">declare</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">strict_types</token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Models</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Illuminate</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Database</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Eloquent</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Model</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6"/>
+      <line no="7">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="8">
+        <token name="T_DOC_COMMENT"> * App\Models\Message</token>
+      </line>
+      <line no="9">
+        <token name="T_DOC_COMMENT"> *</token>
+      </line>
+      <line no="10">
+        <token name="T_DOC_COMMENT"> * @property int $id</token>
+      </line>
+      <line no="11">
+        <token name="T_DOC_COMMENT"> * @property int $from</token>
+      </line>
+      <line no="12">
+        <token name="T_DOC_COMMENT"> * @property string $from_login</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT"> * @property int $to</token>
+      </line>
+      <line no="14">
+        <token name="T_DOC_COMMENT"> * @property string $to_login</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT"> * @property string $message</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT"> * @property \Illuminate\Support\Carbon|null $created_at</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT"> * @property \Illuminate\Support\Carbon|null $updated_at</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT"> * @property string|null $deleted_at</token>
+      </line>
+      <line no="19">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereCreatedAt($value)</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereDeletedAt($value)</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereFrom($value)</token>
+      </line>
+      <line no="22">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereFromLogin($value)</token>
+      </line>
+      <line no="23">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereId($value)</token>
+      </line>
+      <line no="24">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereMessage($value)</token>
+      </line>
+      <line no="25">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereTo($value)</token>
+      </line>
+      <line no="26">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereToLogin($value)</token>
+      </line>
+      <line no="27">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Message whereUpdatedAt($value)</token>
+      </line>
+      <line no="28">
+        <token name="T_DOC_COMMENT"> * @mixin \Eloquent</token>
+      </line>
+      <line no="29">
+        <token name="T_DOC_COMMENT"> * @mixin \Illuminate\Database\Eloquent\Builder</token>
+      </line>
+      <line no="30">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Message newModelQuery()</token>
+      </line>
+      <line no="31">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Message newQuery()</token>
+      </line>
+      <line no="32">
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Message query()</token>
+      </line>
+      <line no="33">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="34">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Message</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXTENDS">extends</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Model</token>
+      </line>
+      <line no="35">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="36">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$fillable</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'from'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'from_login'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'to'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'to_login'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'message'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="40"/>
+    </source>
+  </file>
+</phpunit>
