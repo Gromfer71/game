@@ -20,7 +20,7 @@ class BuildingController extends Controller
 {
     public function qwe()
     {
-        eqweqeqe;
+        echo '123';
 
     }
     public function __construct()
