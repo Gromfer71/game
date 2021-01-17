@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use App\Models\UserBuilding;
 use App\Services\BuildingsHandler;
 use Auth;
@@ -18,11 +17,6 @@ use Illuminate\Http\Request;
  */
 class BuildingController extends Controller
 {
-    public function qwe()
-    {
-        echo '123';
-
-    }
     public function __construct()
     {
         $this->middleware('auth');
@@ -51,10 +45,11 @@ class BuildingController extends Controller
     public function upgrade(Request $request)
     {
         $result = BuildingsHandler::validateUpgrade($request->input('id'));
-        if($result === true)
+        if ($result === true) {
             BuildingsHandler::upgrade($request->input('id'));
-        else
+        } else {
             return back()->with('error', $result);
+        }
 
         return redirect(route('buildings'))->with('ok', 'Улучшение началось.');
     }
