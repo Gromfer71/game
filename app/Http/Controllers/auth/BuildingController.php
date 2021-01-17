@@ -21,7 +21,6 @@ class BuildingController extends Controller
     public function qwe()
     {
         echo '123';
-        echo '123';
 
     }
     public function __construct()
