@@ -10,12 +10,7 @@ use Tests\TestCase;
 
 class IndexTest extends TestCase
 {
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
+
     public function setUp()
     :void
     {
