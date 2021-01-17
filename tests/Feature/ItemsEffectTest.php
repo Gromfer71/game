@@ -36,4 +36,5 @@ class ItemsEffectTest extends TestCase
         $this->post(route('items.use', ['id' => $item->id, 'count' => 1]));
         $this->assertEquals(Auth::user()->food, $wood + 1000);
     }
+
 }
