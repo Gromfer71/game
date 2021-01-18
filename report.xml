@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="C:\OpenServer\domains\laravel\tests" tests="59" assertions="123" errors="0" warnings="0" failures="0" skipped="0" time="4.391935">
+    <testsuite name="Tests\Feature\Buildings\IndexTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\IndexTest.php" tests="1" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.192966">
+      <testcase name="test_buildings_main_page_opened" class="Tests\Feature\Buildings\IndexTest" classname="Tests.Feature.Buildings.IndexTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\IndexTest.php" line="24" assertions="3" time="0.192966"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\Buildings\ShowBuildingDetailsTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\ShowBuildingDetailsTest.php" tests="1" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.071711">
+      <testcase name="test_building_details_page_opened" class="Tests\Feature\Buildings\ShowBuildingDetailsTest" classname="Tests.Feature.Buildings.ShowBuildingDetailsTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\ShowBuildingDetailsTest.php" line="22" assertions="4" time="0.071711"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\Buildings\UpgradeMenuTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeMenuTest.php" tests="1" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.080555">
+      <testcase name="test_building_upgrade_page_opened" class="Tests\Feature\Buildings\UpgradeMenuTest" classname="Tests.Feature.Buildings.UpgradeMenuTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeMenuTest.php" line="20" assertions="3" time="0.080555"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\Buildings\UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.422168">
+      <testcase name="test_lv_upping_time_not_null" class="Tests\Feature\Buildings\UpgradeTest" classname="Tests.Feature.Buildings.UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" line="28" assertions="2" time="0.082287"/>
+      <testcase name="test_empty_building_upgrade" class="Tests\Feature\Buildings\UpgradeTest" classname="Tests.Feature.Buildings.UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" line="36" assertions="1" time="0.062968"/>
+      <testcase name="test_not_enough_resources_for_upgrade" class="Tests\Feature\Buildings\UpgradeTest" classname="Tests.Feature.Buildings.UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" line="41" assertions="2" time="0.064793"/>
+      <testcase name="test_max_upgrades_limit" class="Tests\Feature\Buildings\UpgradeTest" classname="Tests.Feature.Buildings.UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" line="49" assertions="4" time="0.099605"/>
+      <testcase name="test_finish_upgrade" class="Tests\Feature\Buildings\UpgradeTest" classname="Tests.Feature.Buildings.UpgradeTest" file="C:\OpenServer\domains\laravel\tests\Feature\Buildings\UpgradeTest.php" line="59" assertions="3" time="0.112514"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\ItemsEffectTest" file="C:\OpenServer\domains\laravel\tests\Feature\ItemsEffectTest.php" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.133462">
+      <testcase name="test_use_item_1_food_chest_1000" class="Tests\Feature\ItemsEffectTest" classname="Tests.Feature.ItemsEffectTest" file="C:\OpenServer\domains\laravel\tests\Feature\ItemsEffectTest.php" line="24" assertions="1" time="0.068071"/>
+      <testcase name="test_use_item_2_wood_chest_1000" class="Tests\Feature\ItemsEffectTest" classname="Tests.Feature.ItemsEffectTest" file="C:\OpenServer\domains\laravel\tests\Feature\ItemsEffectTest.php" line="32" assertions="1" time="0.065390"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" tests="5" assertions="15" errors="0" warnings="0" failures="0" skipped="0" time="0.352495">
+      <testcase name="test_no_one_message" class="Tests\Feature\LastMessagesInDialogsTest" classname="Tests.Feature.LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" line="26" assertions="3" time="0.070028"/>
+      <testcase name="test_one_outgoing_message" class="Tests\Feature\LastMessagesInDialogsTest" classname="Tests.Feature.LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" line="44" assertions="3" time="0.069425"/>
+      <testcase name="test_one_incoming_message" class="Tests\Feature\LastMessagesInDialogsTest" classname="Tests.Feature.LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" line="63" assertions="3" time="0.069237"/>
+      <testcase name="test_two_messages_incoming_message_last" class="Tests\Feature\LastMessagesInDialogsTest" classname="Tests.Feature.LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" line="82" assertions="3" time="0.071917"/>
+      <testcase name="test_two_messages_outgoing_message_last" class="Tests\Feature\LastMessagesInDialogsTest" classname="Tests.Feature.LastMessagesInDialogsTest" file="C:\OpenServer\domains\laravel\tests\Feature\LastMessagesInDialogsTest.php" line="110" assertions="3" time="0.071888"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\LoginTest" file="C:\OpenServer\domains\laravel\tests\Feature\LoginTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.146089">
+      <testcase name="auth_success" class="Tests\Feature\LoginTest" classname="Tests.Feature.LoginTest" file="C:\OpenServer\domains\laravel\tests\Feature\LoginTest.php" line="12" assertions="1" time="0.048157"/>
+      <testcase name="login_failed" class="Tests\Feature\LoginTest" classname="Tests.Feature.LoginTest" file="C:\OpenServer\domains\laravel\tests\Feature\LoginTest.php" line="21" assertions="1" time="0.048107"/>
+      <testcase name="password_failed" class="Tests\Feature\LoginTest" classname="Tests.Feature.LoginTest" file="C:\OpenServer\domains\laravel\tests\Feature\LoginTest.php" line="30" assertions="1" time="0.049824"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\LogoutTest" file="C:\OpenServer\domains\laravel\tests\Feature\LogoutTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.059883">
+      <testcase name="test_example" class="Tests\Feature\LogoutTest" classname="Tests.Feature.LogoutTest" file="C:\OpenServer\domains\laravel\tests\Feature\LogoutTest.php" line="17" assertions="2" time="0.059883"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" tests="8" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.530308">
+      <testcase name="success_send" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="18" assertions="1" time="0.071660"/>
+      <testcase name="existing_in_database" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="26" assertions="1" time="0.067336"/>
+      <testcase name="not_existing_invalid_message" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="34" assertions="1" time="0.065656"/>
+      <testcase name="null_user_send" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="43" assertions="3" time="0.068222"/>
+      <testcase name="null_user_send2" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="50" assertions="2" time="0.062946"/>
+      <testcase name="empty_message" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="57" assertions="2" time="0.063503"/>
+      <testcase name="very_large_message" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="65" assertions="2" time="0.066023"/>
+      <testcase name="send_message_to_self" class="Tests\Feature\MessageTest" classname="Tests.Feature.MessageTest" file="C:\OpenServer\domains\laravel\tests\Feature\MessageTest.php" line="73" assertions="2" time="0.064962"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" tests="5" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.342494">
+      <testcase name="SuccessReg" class="Tests\Feature\RegisterTest" classname="Tests.Feature.RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" line="15" assertions="3" time="0.077115"/>
+      <testcase name="InvalidLogin" class="Tests\Feature\RegisterTest" classname="Tests.Feature.RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" line="26" assertions="3" time="0.066439"/>
+      <testcase name="InvalidPassword" class="Tests\Feature\RegisterTest" classname="Tests.Feature.RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" line="36" assertions="3" time="0.067244"/>
+      <testcase name="InvalidPasswordCnfirmation" class="Tests\Feature\RegisterTest" classname="Tests.Feature.RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" line="45" assertions="3" time="0.066568"/>
+      <testcase name="test_castle_created_after_registration" class="Tests\Feature\RegisterTest" classname="Tests.Feature.RegisterTest" file="C:\OpenServer\domains\laravel\tests\Feature\RegisterTest.php" line="54" assertions="1" time="0.065128"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\SeederTest" file="C:\OpenServer\domains\laravel\tests\Feature\SeederTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.041675">
+      <testcase name="completeness" class="Tests\Feature\SeederTest" classname="Tests.Feature.SeederTest" file="C:\OpenServer\domains\laravel\tests\Feature\SeederTest.php" line="13" assertions="1" time="0.041675"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\Troops\IndexTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\IndexTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.061310">
+      <testcase name="test_page_opened" class="Tests\Feature\Troops\IndexTest" classname="Tests.Feature.Troops.IndexTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\IndexTest.php" line="18" assertions="1" time="0.061310"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\Troops\TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" tests="9" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.700783">
+      <testcase name="test_success_start_train" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="22" assertions="2" time="0.067349"/>
+      <testcase name="test_record_inserted_in_database" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="27" assertions="1" time="0.068714"/>
+      <testcase name="test_train_time_not_null_after_train_start" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="33" assertions="1" time="0.069025"/>
+      <testcase name="test_resources_sub_after_train_start" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="39" assertions="2" time="0.070842"/>
+      <testcase name="test_troops_already_trains_now" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="49" assertions="2" time="0.069732"/>
+      <testcase name="test_not_enough_resources_for_training" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="55" assertions="2" time="0.060970"/>
+      <testcase name="test_train_troops_null_after_train_ended" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="60" assertions="1" time="0.093189"/>
+      <testcase name="test_troops_table_not_empty_after_train_ended" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="69" assertions="1" time="0.102822"/>
+      <testcase name="test_troops_increased_if_already_exists" class="Tests\Feature\Troops\TrainTest" classname="Tests.Feature.Troops.TrainTest" file="C:\OpenServer\domains\laravel\tests\Feature\Troops\TrainTest.php" line="78" assertions="1" time="0.098139"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" tests="6" assertions="19" errors="0" warnings="0" failures="0" skipped="0" time="0.379989">
+      <testcase name="home_page" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="28" assertions="3" time="0.060647"/>
+      <testcase name="show_online" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="34" assertions="3" time="0.069238"/>
+      <testcase name="mail_main" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="40" assertions="2" time="0.060084"/>
+      <testcase name="dialog" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="46" assertions="4" time="0.064848"/>
+      <testcase name="systemMessages" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="53" assertions="3" time="0.061235"/>
+      <testcase name="showSystemMessage" class="Tests\Feature\UITest" classname="Tests.Feature.UITest" file="C:\OpenServer\domains\laravel\tests\Feature\UITest.php" line="59" assertions="4" time="0.063937"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\UpdateUser\EverydayGiftTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\EverydayGiftTest.php" tests="3" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.214598">
+      <testcase name="success_send_gift" class="Tests\Feature\UpdateUser\EverydayGiftTest" classname="Tests.Feature.UpdateUser.EverydayGiftTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\EverydayGiftTest.php" line="21" assertions="2" time="0.065155"/>
+      <testcase name="failed_send_gift" class="Tests\Feature\UpdateUser\EverydayGiftTest" classname="Tests.Feature.UpdateUser.EverydayGiftTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\EverydayGiftTest.php" line="35" assertions="2" time="0.060524"/>
+      <testcase name="take_items_from_system_message" class="Tests\Feature\UpdateUser\EverydayGiftTest" classname="Tests.Feature.UpdateUser.EverydayGiftTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\EverydayGiftTest.php" line="48" assertions="6" time="0.088919"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\UpdateUser\UpdateLastActiveTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\UpdateLastActiveTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.062697">
+      <testcase name="updated_last_active" class="Tests\Feature\UpdateUser\UpdateLastActiveTest" classname="Tests.Feature.UpdateUser.UpdateLastActiveTest" file="C:\OpenServer\domains\laravel\tests\Feature\UpdateUser\UpdateLastActiveTest.php" line="21" assertions="2" time="0.062697"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.478027">
+      <testcase name="test_item_use_success" class="Tests\Feature\UseItemTest" classname="Tests.Feature.UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" line="27" assertions="1" time="0.086155"/>
+      <testcase name="test_item_should_deleted_then_count_zero" class="Tests\Feature\UseItemTest" classname="Tests.Feature.UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" line="38" assertions="1" time="0.085164"/>
+      <testcase name="test_item_should_assertion_exception_count_greater_item_count" class="Tests\Feature\UseItemTest" classname="Tests.Feature.UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" line="49" assertions="1" time="0.119196"/>
+      <testcase name="test_item_zero_count_exception_not_null" class="Tests\Feature\UseItemTest" classname="Tests.Feature.UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" line="59" assertions="1" time="0.107339"/>
+      <testcase name="test_item_invalid_id" class="Tests\Feature\UseItemTest" classname="Tests.Feature.UseItemTest" file="C:\OpenServer\domains\laravel\tests\Feature\UseItemTest.php" line="69" assertions="1" time="0.080173"/>
+    </testsuite>
+    <testsuite name="Tests\Feature\zzzTest" file="C:\OpenServer\domains\laravel\tests\Feature\zzzTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.120728">
+      <testcase name="test_example" class="Tests\Feature\zzzTest" classname="Tests.Feature.zzzTest" file="C:\OpenServer\domains\laravel\tests\Feature\zzzTest.php" line="16" assertions="1" time="0.120728"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
