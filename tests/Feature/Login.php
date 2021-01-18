@@ -1,23 +1,22 @@
 <?php
 
-namespace Tests\Feature\Troops;
+
+namespace Tests\Feature;
+
 
 use App\Models\User;
+use App\Models\UserBuilding;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
-class IndexTest extends TestCase
+trait login
 {
+
     public function setUp()
     :void
     {
         parent::setUp();
         Auth::login(User::factory()->create());
-    }
-
-    public function test_page_opened()
-    {
-        $response = $this->get(route('troops.index'));
-        $response->assertStatus(200);
+        UserBuilding::factory()->create();
     }
 }

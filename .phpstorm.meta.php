@@ -11,7 +11,6 @@ namespace PHPSTORM_META {
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -63,6 +62,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -191,7 +191,6 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Container\Container::makeWith(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -243,6 +242,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -371,7 +371,6 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::get(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -423,6 +422,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -551,7 +551,6 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -603,6 +602,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -731,7 +731,6 @@ namespace PHPSTORM_META {
         ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -783,6 +782,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -911,7 +911,6 @@ namespace PHPSTORM_META {
         ]));
     override(\App::get(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -963,6 +962,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -1091,7 +1091,6 @@ namespace PHPSTORM_META {
         ]));
     override(\App::make(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1143,6 +1142,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -1271,7 +1271,6 @@ namespace PHPSTORM_META {
         ]));
     override(\App::makeWith(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1323,6 +1322,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -1451,7 +1451,6 @@ namespace PHPSTORM_META {
         ]));
     override(\app(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1503,6 +1502,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -1631,7 +1631,6 @@ namespace PHPSTORM_META {
         ]));
     override(\resolve(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1683,6 +1682,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
@@ -1811,7 +1811,6 @@ namespace PHPSTORM_META {
         ]));
     override(\Psr\Container\ContainerInterface::get(0), map([
         '' => '@',
-            'App\Repositories\Write\WriteUserRepository' => \App\Repositories\Write\WriteUserRepository::class,
             'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
             'Facade\FlareClient\Flare' => \Facade\FlareClient\Flare::class,
             'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1863,6 +1862,7 @@ namespace PHPSTORM_META {
             'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
             'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
             'cache' => \Illuminate\Cache\CacheManager::class,
+            'cache.psr6' => \Symfony\Component\Cache\Adapter\Psr16Adapter::class,
             'cache.store' => \Illuminate\Cache\Repository::class,
             'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
             'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,

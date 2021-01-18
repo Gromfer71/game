@@ -9,4 +9,14 @@ abstract class TestCase extends BaseTestCase
 {
     use DatabaseTransactions;
     use CreatesApplication;
+
+    public function setUp()
+    :void
+    {
+        parent::setUp();
+        $this->post(
+            route('register'),
+            ['login' => 'user', 'password' => '123', 'password_confirmation' => '123']
+        );
+    }
 }

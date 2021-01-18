@@ -68,6 +68,12 @@ class RegisterController extends Controller
             'password' =>  $data['password'],
             'last_check' => time() - 1,
             'last_active' => time() - 1,
+            'food' => 10000,
+            'wood' => 10000,
+            'iron' => 10000,
+            'mithril' => 10000,
+            'max_building_upgrades' => 1,
+            'train_time' => null,
         ]);
     }
 }

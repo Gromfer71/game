@@ -4,10 +4,17 @@ namespace Tests\Feature;
 
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use DB;
 class LoginTest extends TestCase
 {
+    public function setUp()
+    :void
+    {
+        parent::setUp();
+        Auth::logout();
+    }
     /** @test */
     public function auth_success()
     {

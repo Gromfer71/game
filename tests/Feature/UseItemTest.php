@@ -12,13 +12,6 @@ use Tests\TestCase;
 class UseItemTest extends TestCase
 {
 
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
-
     /**
      * A basic feature test example.
      *
