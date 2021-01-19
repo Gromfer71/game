@@ -4,24 +4,18 @@ namespace Tests\Feature\Troops;
 
 use App\Models\TrainTroop;
 use App\Models\Troop;
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 
 class TrainTest extends TestCase
 {
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
 
     public function test_success_start_train()
     {
-        $this->post(route('troops.train'), ['1' => 1])->assertStatus(302)->assertSessionHas('ok', 'Обучение началось.');
+        $this->post(route('troops.train'), ['1' => 1])->assertStatus(302)->assertSessionHas(
+            'ok',
+            __('mes.troops.trainStart')
+        );
     }
 
     public function test_record_inserted_in_database()
@@ -41,7 +35,9 @@ class TrainTest extends TestCase
         $beforeFood = Auth::user()->food;
         $beforeWood = Auth::user()->wood;
         $this->post(route('troops.train'), ['1' => 1]);
-        $trainRes = json_decode(TrainTroop::where(['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '1'])->first()->baseTroop()->cost);
+        $trainRes = json_decode(
+            TrainTroop::where(['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '1'])->first()->baseTroop()->cost
+        );
         $this->assertTrue(Auth::user()->food + $trainRes->food == $beforeFood);
         $this->assertTrue(Auth::user()->wood + $trainRes->wood == $beforeWood);
     }
@@ -49,12 +45,20 @@ class TrainTest extends TestCase
     public function test_troops_already_trains_now()
     {
         TrainTroop::factory(['troop_id' => 1, 'count' => 10])->create();
-        $this->post(route('troops.train'), ['1' => 10])->assertStatus(302)->assertSessionHas('error', 'Войска уже обучаются!');
+        $this->post(route('troops.train'), ['1' => 10])->assertStatus(302)->assertSessionHas(
+            'error',
+            __(
+                'mes.troops.alreadyTraining'
+            )
+        );
     }
 
     public function test_not_enough_resources_for_training()
     {
-        $this->post(route('troops.train'), ['1' => 9999999])->assertStatus(302)->assertSessionHas('error', 'Недостаточно ресурсов для обучения!');
+        $this->post(route('troops.train'), ['1' => 9999999])->assertStatus(302)->assertSessionHas(
+            'error',
+            __('mes.notEnoughRes')
+        );
     }
 
     public function test_train_troops_null_after_train_ended()
@@ -85,12 +89,6 @@ class TrainTest extends TestCase
 
         $this->assertDatabaseHas('troops', ['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '2']);
     }
-
-
-
-
-
-
 
 
 }

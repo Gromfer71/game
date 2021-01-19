@@ -7,7 +7,6 @@ use Tests\TestCase;
 
 class UpgradeMenuTest extends TestCase
 {
-
     public function test_building_upgrade_page_opened()
     {
         $this->get(route('buildingUpgradeMenu', Auth::user()->userBuildings()->first->id))

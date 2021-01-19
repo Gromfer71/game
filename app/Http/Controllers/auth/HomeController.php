@@ -5,10 +5,8 @@ declare(strict_types = 1);
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\Scopes\UsersOnline;
 use App\Models\User;
-use App\Repositories\UserRepository;
-use Illuminate\Support\Facades\Auth;
+use Auth;
 
 /**
  * The main controller of authorized users pages.
@@ -28,7 +26,7 @@ class HomeController extends Controller
         return view(
             'auth.home',
             [
-                'me' => \Auth::user()
+                'me' => Auth::user()
             ]
         );
     }

@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use App\Services\BuildingsHandler;
+use App\Services\ItemHandler;
+use App\Services\MailHandler;
+use App\Services\TroopHandler;
+use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,8 +19,12 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         if ($this->app->isLocal()) {
-            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            $this->app->register(IdeHelperServiceProvider::class);
         }
+        $this->app->singleton(BuildingsHandler::class);
+        $this->app->singleton(TroopHandler::class);
+        $this->app->singleton(MailHandler::class);
+        $this->app->singleton(ItemHandler::class);
 
     }
 

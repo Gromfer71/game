@@ -11,7 +11,24 @@ return [
     'platz' => 'Плац',
     'platzDescribe' => 'Плац увеличивает максимальное количество войск в походе.',
     'march_size' => 'Максимальный размер похода',
+    'notEnoughRes' => 'Недостаточно ресурсов!',
 
+
+    // session messages
+    'upgrade.success' => 'Улучшение началось.',
+    'upgrade.maxUpgradesLimit' => 'Достигнуто максимальное количество одновременно улучшаемых простроек!',
+    'upgrade.maxLvLimit' => 'Постройка достигла максимального уровня!',
+    'upgrade.alreadyUpgrading' => 'Постройка уже улучшается!',
+
+
+    // mail
+    'upgrade.finishedMail.title' => 'Оповещение об улучшении постройки',
+    'upgrade.finishedMail.text' => 'Улучшение постройки :category завершено',
+    'mail.sent' => 'Отправлено',
+
+    //troops
+    'troops.trainStart' => 'Обучение началось.',
+    'troops.alreadyTraining' => 'Войска уже обучаются!',
 
 
 ];

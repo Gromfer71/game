@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Traits\UserRelations;
 use App\Resources;
 use Assert\Assertion;
 use Auth;
@@ -15,7 +16,7 @@ use Illuminate\Notifications\Notifiable;
  * App\Models\User
  *
  * @property int
- *               $id
+ *
  * @property string
  *               $login
  * @property string
@@ -78,11 +79,14 @@ use Illuminate\Notifications\Notifiable;
  * @method static Builder|User online()
  * @property int
  *               $wood
+ * @property int|null $train_time
+ * @method static Builder|User whereTrainTime($value)
  */
 class User extends Authenticatable
 {
     use HasFactory;
     use Notifiable;
+    use UserRelations;
 
     private const TIME_ADD_RESOURCES = 1;
     private const TIME_TO_OFFLINE    = 9999999;
@@ -98,36 +102,34 @@ class User extends Authenticatable
 
     public function subRes(Resources $resources)
     {
-        Assertion::greaterOrEqualThan(Auth::user()->food, $resources->getFood());
-        Assertion::greaterOrEqualThan(Auth::user()->wood, $resources->getWood());
-        Assertion::greaterOrEqualThan(Auth::user()->iron, $resources->getIron());
-        Assertion::greaterOrEqualThan(Auth::user()->mithril, $resources->getMithril());
+        Assertion::greaterOrEqualThan($this->food, $resources->getFood());
+        Assertion::greaterOrEqualThan($this->wood, $resources->getWood());
+        Assertion::greaterOrEqualThan($this->iron, $resources->getIron());
+        Assertion::greaterOrEqualThan($this->mithril, $resources->getMithril());
 
-        Auth::user()->food -= $resources->getFood();
-        Auth::user()->wood -= $resources->getWood();
-        Auth::user()->iron -= $resources->getIron();
-        Auth::user()->mithril -= $resources->getMithril();
-
-        Auth::user()->saveOrFail();
+        $this->food -= $resources->getFood();
+        $this->wood -= $resources->getWood();
+        $this->iron -= $resources->getIron();
+        $this->mithril -= $resources->getMithril();
     }
 
     public function addRes(Resources $resources)
     {
-        Auth::user()->food += $resources->getFood();
-        Auth::user()->wood += $resources->getWood();
-        Auth::user()->iron += $resources->getIron();
-        Auth::user()->mithril += $resources->getMithril();
+        $this->food += $resources->getFood();
+        $this->wood += $resources->getWood();
+        $this->iron += $resources->getIron();
+        $this->mithril += $resources->getMithril();
 
-        Auth::user()->saveOrFail();
+        $this->saveOrFail();
     }
 
     public function validateSubRes(Resources $resources)
     {
         return
-            $resources->getFood() <= Auth::user()->food
-            && $resources->getWood() <= Auth::user()->wood
-            && $resources->getIron() <= Auth::user()->iron
-            && $resources->getMithril() <= Auth::user()->mithril;
+            $resources->getFood() <= $this->food
+            && $resources->getWood() <= $this->wood
+            && $resources->getIron() <= $this->iron
+            && $resources->getMithril() <= $this->mithril;
     }
 
     public function checkTimeToAddResources()
@@ -162,45 +164,23 @@ class User extends Authenticatable
     public function createTrainTime($time)
     {
         $this->train_time = time() + $time;
+        $this->save();
+    }
+
+    public function validateBuildingUpgradeCountLimit()
+    {
+        if ($this->userBuildings()->where('lv_upping_time', '>', time())->count()
+            == $this->max_building_upgrades) {
+
+            return false;
+        }
+
+        return true;
     }
 
     // scopes
     public function scopeOnline(Builder $query)
     {
         return $query->where('last_active', ">", Carbon::now()->subSeconds(self::TIME_TO_OFFLINE))->get();
-    }
-
-    // relations
-    public function items()
-    {
-        return $this->hasMany(Item::class, 'user_id', 'id')->get();
-    }
-
-    public function userBuildings()
-    {
-        return $this->hasMany(UserBuilding::class, 'user_id', 'id')->get();
-    }
-
-    public function systemMessages()
-    {
-        return $this->hasMany(SystemMessage::class, 'to', 'id')->get();
-    }
-
-    public function trainTroops()
-    {
-        return $this->hasMany(TrainTroop::class, 'user_id', 'id')->get();
-    }
-
-    public function troops()
-    {
-        return $this->hasMany(Troop::class, 'user_id', 'id')->get();
-    }
-
-    public function setAttribute($key, $value)
-    {
-        $isRememberTokenAttribute = $key == $this->getRememberTokenName();
-        if (!$isRememberTokenAttribute) {
-            parent::setAttribute($key, $value);
-        }
     }
 }

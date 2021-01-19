@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 /**
  * App\Models\UserBuilding
@@ -15,21 +17,22 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null                     $lv_upping_time
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding query()
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereBaseId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereLvUpping($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereLvUppingTime($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserBuilding whereUserId($value)
+ * @method static Builder|UserBuilding newModelQuery()
+ * @method static Builder|UserBuilding newQuery()
+ * @method static Builder|UserBuilding query()
+ * @method static Builder|UserBuilding whereBaseId($value)
+ * @method static Builder|UserBuilding whereCreatedAt($value)
+ * @method static Builder|UserBuilding whereId($value)
+ * @method static Builder|UserBuilding whereLvUpping($value)
+ * @method static Builder|UserBuilding whereLvUppingTime($value)
+ * @method static Builder|UserBuilding whereUpdatedAt($value)
+ * @method static Builder|UserBuilding whereUserId($value)
  * @mixin \Eloquent
  */
 class UserBuilding extends Model
 {
     use HasFactory;
+    use Notifiable;
 
     protected $guarded = [];
 
@@ -40,20 +43,26 @@ class UserBuilding extends Model
 
     public function checkFinishUpgrade()
     {
-
-        if ($this->lv_upping_time < time() && $this->lv_upping_time != null)
-        {
-
+        if ($this->lv_upping_time < time() && $this->lv_upping_time != null) {
             $nextBaseBuilding = Building::where('category', $this->baseBuilding()->category)
                 ->where('lv', $this->baseBuilding()->lv + 1)->first();
             $this->base_id = $nextBaseBuilding->b_id;
             $this->lv_upping_time = null;
             $this->save();
 
-
             return true;
         }
 
         return false;
+    }
+
+    public function validateMaxLv()
+    {
+        return $this->baseBuilding()->lv < 30;
+    }
+
+    public function upgrade()
+    {
+        $this->lv_upping_time = $this->baseBuilding()->time_up + time();
     }
 }

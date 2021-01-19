@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use App\Models\SystemMessage;
-use App\Models\UserBuilding;
 use App\Services\BuildingsHandler;
 use App\Services\MailHandler;
 use App\Services\TroopHandler;
@@ -27,18 +26,19 @@ class UpdateUser
      */
     public function handle($request, Closure $next)
     {
+        app(BuildingsHandler::class)->setUser(Auth::user());
+        app(TroopHandler::class)->setUser(Auth::user());
 
-        if(SystemMessage::everydayGift()) {
-            MailHandler::EverydayGift();
+        if (SystemMessage::everydayGift()) {
+            app(MailHandler::class)->everydayGift(Auth::id());
         }
 
-        if(Auth::user()->checkTimeToAddResources()) {
+        if (Auth::user()->checkTimeToAddResources()) {
             Auth::user()->ResourcesIncome();
         }
 
-        BuildingsHandler::checkBuildingsFinished();
-
-        TroopHandler::checkTrainEnd();
+        app(BuildingsHandler::class)->checkBuildingsFinished();
+        app(TroopHandler::class)->checkTrainEnd();
 
 
         Auth::user()->updateLastCheck();

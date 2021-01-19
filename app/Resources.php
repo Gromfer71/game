@@ -48,12 +48,19 @@ class Resources
         $this->mithril = $mithril;
     }
 
+    public static function createFromModel($model)
+    {
+        return new self($model->food, $model->wood, $model->iron, $model->mithril);
+    }
+
     public function add(Resources $resources)
     {
         $this->food += $resources->getFood();
         $this->wood += $resources->getWood();
         $this->iron += $resources->getIron();
         $this->mithril += $resources->getMithril();
+
+        return $this;
     }
 
     public function sub(Resources $resources)

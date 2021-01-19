@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
  */
 class BuildingController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -42,16 +43,16 @@ class BuildingController extends Controller
         return view('auth.buildings.details', compact('building', 'properties'));
     }
 
-    public function upgrade(Request $request)
+    public function upgrade(Request $request, BuildingsHandler $handler)
     {
-        $result = BuildingsHandler::validateUpgrade($request->input('id'));
+        $handler->setBuilding(UserBuilding::findOrFail($request->input('id')));
+
+        $result = $handler->upgrade();
         if ($result === true) {
-            BuildingsHandler::upgrade($request->input('id'));
+            return redirect(route('buildings'))->with('ok', __('mes.upgrade.success'));
         } else {
             return back()->with('error', $result);
         }
-
-        return redirect(route('buildings'))->with('ok', 'Улучшение началось.');
     }
 }
 

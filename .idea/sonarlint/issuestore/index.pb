@@ -7,8 +7,6 @@ W
 'bootstrap/cache/livewire-components.php,4\8\487dc85784502f02c7a00e9c8cd5ed92cf3a8733
 S
 #resources/views/auth/home.blade.php,4\5\454199e8ca50af18ba64bb61d71a200de07a707b
-K
-tests/Feature/LoginTest.php,9\d\9d514c617684fc403b6dd71c6ff20d81468f2dd9
 [
 +resources/views/auth/mail/dialogs.blade.php,a\4\a4ef450851b05b378144333278766248e3cc7163
 Z
@@ -23,12 +21,6 @@ A
 app/Resources.php,3\3\33135557d131aced93bc07a9d85087398518892b
 A
 app/ItemUsage.php,9\f\9f090f0eb59657447c80d580c4b83ef5360c2210
-H
-tests/Feature/UITest.php,5\7\57a0fd828006e79989c764bb9d396fb5421c256d
-M
-tests/Feature/UseItemTest.php,5\7\5746b489a4572405192260a570d40141f492ff6f
-M
-tests/Feature/MessageTest.php,4\2\4240f89717c66298b00b2bc5f818c697385dc5d4
 J
 app/Exceptions/Handler.php,3\b\3badd23b42804fa4016b5b9734a7b35c12ec27e4
 Z
@@ -57,8 +49,6 @@ L
 app/Services/ItemHandler.php,5\2\52b5756dba7b7288c9d877e3b8bb22cde61aa9f6
 C
 app/Models/Item.php,d\8\d8fed3107da86599a32ab95809bd51e9bd1f792d
-L
-app/Services/UserHandler.php,c\6\c60a4afc419bb21602684598cb3fa54468ec54ea
 Q
 !app/Services/BuildingsHandler.php,4\8\4817ac04a09cfb528d43bdf47ff0f4e30b60187a
 a
@@ -77,8 +67,6 @@ C
 app/Models/User.php,a\9\a90f2e50cb06863b54effced365aa5f1fe7d9c88
 <
 app/Time.php,5\b\5ba849c1fefd4d667f80472fee5ed0f451c2c463
-Q
-!tests/Feature/ItemsEffectTest.php,b\c\bc8315df190b5516346552493d0ae7ca13c5809b
 ]
 -tests/Feature/UpdateUser/EverydayGiftTest.php,4\2\42215ef83adceaa11011ac1cd87f41c511785795
 a
@@ -177,8 +165,6 @@ D
 app/Models/Troop.php,d\1\d1ad9605a378249efa74c22bdfb4269feed8d8ce
 I
 app/Models/TrainTroop.php,9\c\9c2c22f5a2bbaf84491d691447b650329dbd7c3b
-N
-tests/Feature/RegisterTest.php,3\b\3bb900b1853dc0752b7628ec2803d41a33eb0c82
 R
 "tests/Feature/Troops/IndexTest.php,5\3\5377c7f1919a3fbcacb31cb4c4d51d9debef5fd2
 R
@@ -273,8 +259,6 @@ Z
 config/cache.php,8\5\85b552139c7f666652636ddf8db9133860f81e48
 Q
 !database/seeders/CastleSeeder.php,f\c\fcc25994bc16d397a236a0a7c0c271af40936aef
-h
-8app/Http/Controllers/guest/ConfirmPasswordController.php,7\d\7d47a92b3c7393951767a8d89de0459c56775785
 q
 Acoverage/Http/Controllers/guest/ConfirmPasswordController.php.xml,4\3\4397717150d10df9239ee1757404656199a447f1
 a
@@ -329,8 +313,6 @@ F
 config/filesystems.php,0\8\0851bcf6cd0903bba3a25c52b3b65e4e473a57d6
 Z
 *resources/views/templates/footer.blade.php,1\a\1a44a3e81ce219d8d1b872a1d29064ef1b28c408
-g
-7app/Http/Controllers/guest/ForgotPasswordController.php,1\2\12be0f145a1d2baa1bd60ba09e88146cf01331b4
 p
 @coverage/Http/Controllers/guest/ForgotPasswordController.php.xml,8\d\8d9676e0b41e04351e736532440659aeb2dfd99f
 s
@@ -393,8 +375,6 @@ B
 .app/Http/Controllers/guest/LoginController.php,6\6\665b8345f57489dbaabe4b40955859c9cd7353e6
 g
 7coverage/Http/Controllers/guest/LoginController.php.xml,6\7\678b7556e3712c93565962a966becf0c13c83848
-L
-tests/Feature/LogoutTest.php,3\1\312f55ebe62ae69a243dcc3aaafcf212ba28d2b2
 C
 public/css/mail.css,3\2\32dc57adda9587bb706d6a4ad359f1c41b283e60
 ?
@@ -419,8 +399,6 @@ U
 0coverage/Repositories/MessageRepository.php.html,f\6\f64628f65c81decef9d495b1690439c27a46ca5a
 K
 public/css/messagesWith.css,4\2\42ed26534e1fa781d6fdddfd074c88715f9cee2e
-`
-0app/Http/Controllers/auth/MonstersController.php,5\c\5c73c19768940dc4b173a76b890ab562114b2c56
 i
 9coverage/Http/Controllers/auth/MonstersController.php.xml,3\e\3eccd6230a60b2a2c4c10b367ed596d0875bd88e
 K
@@ -487,8 +465,6 @@ j
 +app/Providers/RepositoryServiceProvider.php,6\6\667884d5c02b1eab2cc064e4c1d0f017d8a55e41
 d
 4coverage/Providers/RepositoryServiceProvider.php.xml,6\c\6cb326e975c730113112d06149cc914a8d827c3c
-f
-6app/Http/Controllers/guest/ResetPasswordController.php,5\d\5ddccfb8bc652597fcb62660ceba9b825abe455f
 o
 ?coverage/Http/Controllers/guest/ResetPasswordController.php.xml,2\f\2f92f12cc7829baa047b6a68a0966b657396d82e
 _
@@ -561,8 +537,6 @@ U
 +coverage/Models/Scopes/UsersOnline.php.html,e\6\e6ed1b15810527aa60a769ccdfa30f2a2ef98e81
 Z
 *coverage/Models/Scopes/UsersOnline.php.xml,4\9\49680e64912908ab92712f155eab93237914b082
-e
-5app/Http/Controllers/guest/VerificationController.php,0\c\0cc040837c4a1a10d8860f4107e7e3a0076aa539
 n
 >coverage/Http/Controllers/guest/VerificationController.php.xml,f\5\f5951865fc068b94d8eccddaadb53802ff0c8ed1
 W
@@ -752,9 +726,39 @@ C
 :
 
 report.xml,b\8\b848cd2eab04c7f1b39bbfa574cce2e12c2119a0
-[
-+tests/Feature/LastMessagesInDialogsTest.php,4\e\4eeb8946b26136fc552ebbfffd4b54b904cdd588
-G
-tests/Feature/Login.php,3\e\3ef8f9b102bc24b211b51eaa830aa9455276c9b0
 T
 $tests/Feature/Buildings/ShowTest.php,b\f\bfc377912cc748336ca7f98c5bc89b1fdee03b37
+Q
+!tests/Feature/Items/IndexTest.php,a\1\a13412421b25fa0a8637f49ecca412a3df14d239
+S
+#tests/Feature/Items/UseItemTest.php,0\9\09c759e8e0a12a98e65fe6f426ef05fd45b5a8a1
+W
+'tests/Feature/Items/ItemsEffectTest.php,8\a\8a3ffeca6c16f88de0203f180ba744835852ff1a
+P
+ tests/Feature/Auth/LoginTest.php,3\0\30d6605bfa6c8071d444c50b49456fc41e19e182
+Q
+!tests/Feature/Auth/LogoutTest.php,e\5\e5a2029d3b38b4e01b866a4e5607a8545b5cd4ee
+Y
+)tests/Feature/Mail/SystemMessagesTest.php,f\6\f6ca59b0fce70c834ef24f1a4278875bbac01776
+\
+,tests/Feature/Mail/SystemMessageShowTest.php,8\f\8f75e62558d338610dcf328b1b30db5c68048be4
+`
+0tests/Feature/Mail/SystemMessageGetItemsTest.php,5\3\53182e2a8b2e5d52d34fa2ec910695a4e3bcf9cf
+Q
+!tests/Feature/Mail/DialogTest.php,2\1\21959ad391d2d71f21a7d8115dee488bd32fc863
+R
+"tests/Feature/Mail/DialogsTest.php,5\8\58ae602bb233f44c78d9606b869f8ea05cdb976d
+U
+%tests/Feature/Mail/DialogSendTest.php,e\7\e7f9c5562616cac13c54e1291033227190ab979e
+P
+ tests/Feature/Home/IndexTest.php,1\a\1ab53f28c03499c7c3171b75f5d3a83129531e4f
+U
+%tests/Feature/Home/ShowOnlineTest.php,2\f\2f65748501be198545c5edeb399dd18a7250792e
+P
+ tests/Feature/Mail/IndexTest.php,4\8\48f78ffafc82d0a7fb045307b5b826a6ade95515
+S
+#tests/Feature/Auth/RegisterTest.php,8\8\8869e3522f1053f0af7a3f79e577368dd7031530
+S
+#app/Models/Traits/UserRelations.php,3\1\31db6b77c6bfa54f21f86cffbf235b3f4884bfbd
+]
+-tests/Feature/UpdateUser/AddResourcesTest.php,7\a\7ad5923df73349baba7df9ad94d04a1877a2f926

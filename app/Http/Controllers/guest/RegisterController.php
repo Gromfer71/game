@@ -5,9 +5,9 @@ namespace App\Http\Controllers\guest;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+
 class RegisterController extends Controller
 {
     /*
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      *
-     * @return \App\Models\User|\App\User|\Illuminate\Database\Eloquent\Model
+     * @return \App\Models\User|\Illuminate\Database\Eloquent\Model
      */
     protected function create(array $data)
     {

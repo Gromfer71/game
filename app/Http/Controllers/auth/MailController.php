@@ -71,8 +71,6 @@ class MailController extends Controller
             $items = null;
         }
 
-
-
         return view(
             'auth.mail.system_message_show',
             ['message' => $message, 'items' => $items]
@@ -80,17 +78,18 @@ class MailController extends Controller
     }
 
     /**
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request   $request
+     * @param  \App\Services\ItemHandler  $handler
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Throwable
      */
-    public function systemMessageGetItems(Request $request)
+    public function systemMessageGetItems(Request $request, ItemHandler $handler)
     {
         $message = SystemMessage::findOrFail($request->input('id'));
         $items = json_decode($message->items);
         if($items) {
-            ItemHandler::AddItems($items);
+            $handler->AddItems($items, Auth::id());
         }
         $message->is_items_got = 1;
         $message->save();
@@ -130,6 +129,6 @@ class MailController extends Controller
         );
         $message->saveOrFail();
 
-        return back()->with('ok', 'sent');
+        return back()->with('ok', __('mes.mail.sent'));
     }
 }

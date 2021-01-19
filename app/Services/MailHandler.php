@@ -20,14 +20,16 @@ class MailHandler
     ];
 
     /**
+     * @param $userId
+     *
      * @return bool
      */
-    public static function EverydayGift()
+    public function everydayGift($userId)
     {
         SystemMessage::create(
             [
                 'category' => 'system',
-                'to' => \Auth::user()->id,
+                'to' => $userId,
                 'title' => "Ежедневный подарок",
                 'message' => 'Ежедневный подарок',
                 'items' => json_encode(self::EVERYDAY_GIFT),

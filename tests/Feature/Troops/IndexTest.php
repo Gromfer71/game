@@ -8,16 +8,11 @@ use Tests\TestCase;
 
 class IndexTest extends TestCase
 {
-    public function setUp()
-    :void
-    {
-        parent::setUp();
-        Auth::login(User::factory()->create());
-    }
-
     public function test_page_opened()
     {
-        $response = $this->get(route('troops.index'));
-        $response->assertStatus(200);
+        $this->get(route('troops.index'))
+            ->assertViewIs('auth.troops.index')
+            ->assertViewHasAll([])
+            ->assertStatus(200);
     }
 }

@@ -2,10 +2,7 @@
 
 namespace Tests\Feature\Buildings;
 
-use App\Models\User;
-use App\Models\UserBuilding;
 use Illuminate\Support\Facades\Auth;
-use Tests\Feature\login;
 use Tests\TestCase;
 
 class ShowTest extends TestCase
