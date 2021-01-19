@@ -89,6 +89,4 @@ class TrainTest extends TestCase
 
         $this->assertDatabaseHas('troops', ['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '2']);
     }
-
-
 }

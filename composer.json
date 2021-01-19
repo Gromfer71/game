@@ -10,17 +10,16 @@
     "require": {
         "php": "^7.4",
         "ext-json": "*",
+        "appstract/laravel-opcache": "^4.0",
         "beberlei/assert": "^3.3",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "itsgoingd/clockwork": "^5.0",
         "laravel/framework": "^8.0",
-        "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.3"
     },
-
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
         "barryvdh/laravel-ide-helper": "^2.9",
@@ -39,12 +38,15 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "github-oauth": {
-            "github.com": "34585ecb27a7ea2af4b3d6242571e0f675daa615"
+            "github.com": "e9894bdb84e99ff410daa0a96c0e3fd95ff6bd0b"
         }
     },
     "extra": {
         "laravel": {
-            "dont-discover": ["barryvdh/laravel-ide-helper",  "laravel/telescope"]
+            "dont-discover": [
+                "barryvdh/laravel-ide-helper",
+                "laravel/telescope"
+            ]
         }
     },
     "autoload": {
