@@ -134,7 +134,7 @@ class User extends Authenticatable
 
     public function checkTimeToAddResources()
     {
-        return time() > ($this->last_check + self::TIME_ADD_RESOURCES);
+        return time() > ($this->last_check + self::TIME_ADD_RESOURCES) + 1;
     }
 
     public function ResourcesIncome()
