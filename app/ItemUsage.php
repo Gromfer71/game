@@ -5,7 +5,6 @@ namespace App;
 
 
 use App\Models\Item;
-use Assert\Assert;
 use Assert\Assertion;
 use Auth;
 
@@ -28,7 +27,7 @@ abstract class ItemUsage
         $item = Item::findOrFail($id);
         Assertion::greaterOrEqualThan($item->count, $count);
         Assertion::greaterThan($count, 0);
-        $name = "use_".$item->baseItem()->name;
+        $name = "use_".$item->baseItem->name;
         self::$name($item, $count);
         $item->count -= $count;
         if ($item->count == 0) {
@@ -46,7 +45,7 @@ abstract class ItemUsage
      */
     public static function use_food_chest($item, $count)
     {
-        Auth::user()->food += $item->baseItem()->quality * $count;
+        Auth::user()->food += $item->baseItem->quality * $count;
         Auth::user()->saveOrFail();
     }
 
@@ -58,7 +57,7 @@ abstract class ItemUsage
      */
     public static function use_wood_chest($item, $count)
     {
-        Auth::user()->wood += $item->baseItem()->quality * $count;
+        Auth::user()->wood += $item->baseItem->quality * $count;
         Auth::user()->saveOrFail();
     }
 }

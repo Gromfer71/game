@@ -25,12 +25,15 @@ class BuildingController extends Controller
 
     public function index()
     {
-        return view('auth.buildings.preview', ['buildings' => Auth::user()->userBuildings()]);
+        return view(
+            'auth.buildings.preview',
+            ['buildings' => Auth::user()->userBuildings()->with('baseBuilding')->get()]
+        );
     }
 
     public function upgradeMenu($id)
     {
-        $building = UserBuilding::findOrFail($id);
+        $building = UserBuilding::with('baseBuilding')->findOrFail($id);
 
         return view('auth.buildings.upgrade', ['building' => $building]);
     }
@@ -38,14 +41,13 @@ class BuildingController extends Controller
     public function show($id)
     {
         $building = UserBuilding::findOrFail($id);
-        $properties = json_decode(UserBuilding::findOrFail($id)->baseBuilding()->properties);
-
+        $properties = json_decode(UserBuilding::findOrFail($id)->baseBuilding->properties);
         return view('auth.buildings.details', compact('building', 'properties'));
     }
 
     public function upgrade(Request $request, BuildingsHandler $handler)
     {
-        $handler->setBuilding(UserBuilding::findOrFail($request->input('id')));
+        $handler->setBuilding(UserBuilding::with('baseBuilding')->findOrFail($request->input('id')));
 
         $result = $handler->upgrade();
         if ($result === true) {

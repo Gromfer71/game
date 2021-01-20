@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,13 +13,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $user_id
  * @property int $troop_id
  * @property int $count
- * @method static \Illuminate\Database\Eloquent\Builder|Troop newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Troop newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Troop query()
- * @method static \Illuminate\Database\Eloquent\Builder|Troop whereCount($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Troop whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Troop whereTroopId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Troop whereUserId($value)
+ * @method static Builder|Troop newModelQuery()
+ * @method static Builder|Troop newQuery()
+ * @method static Builder|Troop query()
+ * @method static Builder|Troop whereCount($value)
+ * @method static Builder|Troop whereId($value)
+ * @method static Builder|Troop whereTroopId($value)
+ * @method static Builder|Troop whereUserId($value)
  * @mixin \Eloquent
  */
 class Troop extends Model
@@ -27,6 +28,6 @@ class Troop extends Model
 
     public function baseTroop()
     {
-        return $this->hasOne(BaseTroop::class, 'id', 'troop_id')->first();
+        return $this->hasOne(BaseTroop::class, 'id', 'troop_id');
     }
 }

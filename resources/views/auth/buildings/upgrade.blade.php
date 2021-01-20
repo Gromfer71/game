@@ -10,9 +10,9 @@
     @include('templates.contentHeader', ['title' => 'Улучшение', 'backUrl' => route('buildings')])
     <div class="ui_back">
         <div class="lv__img">
-            <span>ур {{ $building->baseBuilding()->lv }}</span>
+            <span>ур {{ $building->baseBuilding->lv }}</span>
         </div>
-        <span class="title">{{ __("mes.".$building->baseBuilding()->category) }}</span>
+        <span class="title">{{ __("mes.".$building->baseBuilding->category) }}</span>
 
         <img class="polotno" src="{{ asset("img/link_background.png") }}" width="535px" height="200px" alt="">
         <div class="res">
@@ -21,10 +21,10 @@
                     <img src="{{ asset('img/icons/ui_food.png') }}" width="32px" height="32px" alt="foodicon">
                 </div>
                 <div class="box__item">
-                    {{ $building->baseBuilding()->food_up }}
+                    {{ $building->baseBuilding->food_up }}
                 </div>
                 <div class="box__item">
-                    @if(Auth::user()->food >= $building->baseBuilding()->food_up)
+                    @if(Auth::user()->food >= $building->baseBuilding->food_up)
                         <img src="{{ asset('img/icons/success.png') }}" width="32px" alt="success">
                     @else
                         <img src="{{ asset('img/icons/wrong.png') }}" width="32px" alt="success">
@@ -36,9 +36,9 @@
                     <img src="{{ asset('img/icons/ui_wood.png') }}" width="32px" height="32px" alt="foodicon">
                 </div>
                 <div class="box__item">
-                    {{ $building->baseBuilding()->wood_up }}
+                    {{ $building->baseBuilding->wood_up }}
                 </div>
-                @if(Auth::user()->wood >= $building->baseBuilding()->wood_up)
+                @if(Auth::user()->wood >= $building->baseBuilding->wood_up)
                     <img src="{{ asset('img/icons/success.png') }}" width="32px" alt="success">
                 @else
                     <img src="{{ asset('img/icons/wrong.png') }}" width="32px" alt="success">
@@ -50,9 +50,9 @@
                     <img src="{{ asset('img/icons/ui_iron.png') }}" width="32px" height="32px" alt="foodicon">
                 </div>
                 <div class="box__item">
-                    {{ $building->baseBuilding()->iron_up }}
+                    {{ $building->baseBuilding->iron_up }}
                 </div>
-                @if(Auth::user()->iron >= $building->baseBuilding()->iron_up)
+                @if(Auth::user()->iron >= $building->baseBuilding->iron_up)
                     <img src="{{ asset('img/icons/success.png') }}" width="32px" alt="success">
                 @else
                     <img src="{{ asset('img/icons/wrong.png') }}" width="32px" alt="success">
@@ -63,9 +63,9 @@
                     <img src="{{ asset('img/icons/ui_mithril.png') }}" width="32px" height="32px" alt="foodicon">
                 </div>
                 <div class="box__item">
-                    {{ $building->baseBuilding()->mithril_up }}
+                    {{ $building->baseBuilding->mithril_up }}
                 </div>
-                @if(Auth::user()->mithril >= $building->baseBuilding()->mithril_up)
+                @if(Auth::user()->mithril >= $building->baseBuilding->mithril_up)
                     <img src="{{ asset('img/icons/success.png') }}" width="32px" alt="success">
                 @else
                     <img src="{{ asset('img/icons/wrong.png') }}" width="32px" alt="success">
@@ -73,11 +73,13 @@
             </div>
             <form method="POST" action="{{ route('buildingUpgrade') }}">
                 @csrf
-                <input type="text" hidden value="{{ $building->id }}" name="id">
+                <label>
+                    <input type="text" hidden value="{{ $building->id }}" name="id">
+                </label>
                 <button type="submit" class="submit_upgrade">Улучшить</button>
             </form>
                 <div class="upgrade_time">
-                    Время улучшения: {{ date("H:i:s", $building->baseBuilding()->time_up) }}
+                    Время улучшения: {{ date("H:i:s", $building->baseBuilding->time_up) }}
                 </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
@@ -19,19 +20,18 @@ use Illuminate\Support\Facades\Auth;
  * @property int|null $is_read Прочитано ли сообщения
  * @property int|null $is_items_got Забрал ли пользователь вложенные предметы из поля items
  * @property \Illuminate\Support\Carbon|null $created_at дата создания письма
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage query()
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereCategory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereIsItemsGot($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereIsRead($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereItems($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereMessage($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SystemMessage whereTo($value)
- * @method static SystemMessage EveryDayGift()
+ * @method static Builder|SystemMessage newModelQuery()
+ * @method static Builder|SystemMessage newQuery()
+ * @method static Builder|SystemMessage query()
+ * @method static Builder|SystemMessage whereCategory($value)
+ * @method static Builder|SystemMessage whereCreatedAt($value)
+ * @method static Builder|SystemMessage whereId($value)
+ * @method static Builder|SystemMessage whereIsItemsGot($value)
+ * @method static Builder|SystemMessage whereIsRead($value)
+ * @method static Builder|SystemMessage whereItems($value)
+ * @method static Builder|SystemMessage whereMessage($value)
+ * @method static Builder|SystemMessage whereTitle($value)
+ * @method static Builder|SystemMessage whereTo($value)
  * @mixin \Eloquent
  */
 class SystemMessage extends Model

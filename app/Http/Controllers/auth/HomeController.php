@@ -26,13 +26,13 @@ class HomeController extends Controller
         return view(
             'auth.home',
             [
-                'me' => Auth::user()
+                'me' => Auth::user(),
             ]
         );
     }
 
     public function showOnline()
     {
-        return view('auth.showOnline', ['users' => User::online()]);
+        return view('auth.showOnline', ['users' => User::online()->get()->take(10)]);
     }
 }

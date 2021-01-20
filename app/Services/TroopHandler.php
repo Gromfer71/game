@@ -37,6 +37,7 @@ class TroopHandler
         }
         $this->user->createTrainTime($trainTime);
         $this->user->subRes($this->getTrainResources($troops));
+        $this->user->saveOrFail();
     }
 
     public function getTrainResources($troops)
@@ -59,7 +60,7 @@ class TroopHandler
     public function checkTrainEnd()
     {
         if ($this->user->train_time < time() && $this->user->train_time !== null) {
-            foreach ($this->user->trainTroops() as $troop) {
+            foreach ($this->user->trainTroops as $troop) {
                 $exTroop = Troop::where(['user_id' => $this->user->id, 'troop_id' => $troop->troop_id])->first();
                 Troop::updateOrInsert(
                     ['troop_id' => $troop->troop_id, 'user_id' => $this->user->id],

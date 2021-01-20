@@ -11,7 +11,7 @@
         <div class="items__raw">
             @foreach($items as $item)
                 <div class="items__item" id="{{ $item->count }}" data-id="{{ $item->id }}">
-                    <img src=" {{ asset('img/'.$item->baseItem()->name.$item->baseItem()->quality.'.png') }}" alt="item">
+                    <img src=" {{ asset('img/'.$item->baseItem->name.$item->baseItem->quality.'.png') }}" alt="item">
                     <div class="item__count">
                         {{ $item->count }}
                     </div>
@@ -23,8 +23,10 @@
             <div class="item__form">
                 <form action="{{ route('items.use') }}" method="POST">
                     @csrf
-                    <input class="range" type='range' name="count" min='0' max='10' step='1' value='0' />
-                    <input type="text" id="id" hidden value="" name="id">
+                    <label>
+                        <input class="range" type='range' name="count" min='0' max='10' step='1' value='0' />
+                    </label>
+                    <label for="id"></label><input type="text" id="id" hidden value="" name="id">
                     <div class="range__values">
                         <div>0</div>
                         <div id="rangeValue"></div>

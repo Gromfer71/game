@@ -5,7 +5,6 @@ namespace App\Models;
 use App\Models\Traits\UserRelations;
 use App\Resources;
 use Assert\Assertion;
-use Auth;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -88,8 +87,14 @@ class User extends Authenticatable
     use Notifiable;
     use UserRelations;
 
-    private const TIME_ADD_RESOURCES = 1;
-    private const TIME_TO_OFFLINE    = 9999999;
+    /** @var int Интервал времени для начисления ресурсов (чем больше, тем реже будут запросы) */
+    private const TIME_ADD_RESOURCES    = 1;
+
+    /** @var int Время, при котором если пользователь не проявлял активность, он считается как оффлайн. */
+    private const TIME_TO_OFFLINE       = 9999999;
+
+    /** @var int Минимальный интервал, по истечении которого обновляется активность (updateLastActive). */
+    private const TIME_TO_UPDATE_ACTIVE = 30;
 
     public $timestamps = false;
 
@@ -97,7 +102,6 @@ class User extends Authenticatable
 
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     public function subRes(Resources $resources)
@@ -140,24 +144,26 @@ class User extends Authenticatable
     public function ResourcesIncome()
     {
         $res = new Resources();
-        foreach ($this->userBuildings() as $building) {
-            if ($building->baseBuilding()->category == 'castle') {
-                $properties = json_decode($building->baseBuilding()->properties);
+        foreach ($this->userBuildings()->with('baseBuilding')->get() as $building) {
+            if ($building->baseBuilding->category === 'castle') {
+                $properties = json_decode($building->baseBuilding()->first()->properties);
                 $res->add(
                     new Resources(
-                        round($properties->food_income * (time() - $this->last_check / self::TIME_ADD_RESOURCES) / 60),
-                        round($properties->wood_income * (time() - $this->last_check / self::TIME_ADD_RESOURCES) / 60),
+                        round($properties->food_income * ((time() - $this->last_check) / (float)3600)),
+                        round($properties->wood_income * ((time() - $this->last_check) / (float)3600)),
                     )
                 );
             }
         }
+
         $this->addRes($res);
+        $this->last_check = time();
     }
 
-    public function updateLastCheck()
+    public function updateLastActive()
     {
-        if (time() > $this->last_check) {
-            $this->last_check = time();
+        if (time() > $this->last_active + self::TIME_TO_UPDATE_ACTIVE) {
+            $this->last_active = time();
         }
     }
 
@@ -171,7 +177,6 @@ class User extends Authenticatable
     {
         if ($this->userBuildings()->where('lv_upping_time', '>', time())->count()
             == $this->max_building_upgrades) {
-
             return false;
         }
 
@@ -181,6 +186,6 @@ class User extends Authenticatable
     // scopes
     public function scopeOnline(Builder $query)
     {
-        return $query->where('last_active', ">", Carbon::now()->subSeconds(self::TIME_TO_OFFLINE))->get();
+        return $query->where('last_active', ">", Carbon::now()->subSeconds(self::TIME_TO_OFFLINE));
     }
 }

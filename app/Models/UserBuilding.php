@@ -38,14 +38,14 @@ class UserBuilding extends Model
 
     public function baseBuilding()
     {
-        return $this->hasOne(Building::class, 'b_id', 'base_id')->first();
+        return $this->hasOne(Building::class, 'b_id', 'base_id');
     }
 
     public function checkFinishUpgrade()
     {
         if ($this->lv_upping_time < time() && $this->lv_upping_time != null) {
-            $nextBaseBuilding = Building::where('category', $this->baseBuilding()->category)
-                ->where('lv', $this->baseBuilding()->lv + 1)->first();
+            $nextBaseBuilding = Building::where('category', $this->baseBuilding->category)
+                ->where('lv', $this->baseBuilding->lv + 1)->first();
             $this->base_id = $nextBaseBuilding->b_id;
             $this->lv_upping_time = null;
             $this->save();
@@ -58,11 +58,11 @@ class UserBuilding extends Model
 
     public function validateMaxLv()
     {
-        return $this->baseBuilding()->lv < 30;
+        return $this->baseBuilding->lv < 30;
     }
 
     public function upgrade()
     {
-        $this->lv_upping_time = $this->baseBuilding()->time_up + time();
+        $this->lv_upping_time = $this->baseBuilding->time_up + time();
     }
 }

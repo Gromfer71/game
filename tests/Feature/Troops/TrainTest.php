@@ -36,7 +36,7 @@ class TrainTest extends TestCase
         $beforeWood = Auth::user()->wood;
         $this->post(route('troops.train'), ['1' => 1]);
         $trainRes = json_decode(
-            TrainTroop::where(['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '1'])->first()->baseTroop()->cost
+            TrainTroop::where(['user_id' => Auth::id(), 'troop_id' => '1', 'count' => '1'])->first()->baseTroop->cost
         );
         $this->assertTrue(Auth::user()->food + $trainRes->food == $beforeFood);
         $this->assertTrue(Auth::user()->wood + $trainRes->wood == $beforeWood);

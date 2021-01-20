@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    @include('templates.contentHeader', ['title' => __("mes.".$building->baseBuilding()->category), 'backUrl' => route('buildings')])
+    @include('templates.contentHeader', ['title' => __("mes.".$building->baseBuilding->category), 'backUrl' => route('buildings')])
     <div class="ui_back">
         <img class=ui_back__img" src="{{ asset("img/link_background.png") }}" alt="">
-        <span class="b_desc">{{ __('mes.'.$building->baseBuilding()->category.'Describe') }}</span>
+        <span class="b_desc">{{ __('mes.'.$building->baseBuilding->category.'Describe') }}</span>
         <div class="building__prop">
             <img src="{{ asset("img/video_bg.9.png") }}" width="500px" height="300px" alt="">
             <div class="prop">

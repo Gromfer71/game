@@ -53,7 +53,7 @@ class MailController extends Controller
      */
     public function systemMessages()
     {
-        $systemMessages = Auth::user()->systemMessages()->sortByDesc('created_at');
+        $systemMessages = Auth::user()->systemMessages->sortByDesc('created_at');
         return view('auth.mail.system_messages', ['messages' => $systemMessages]);
     }
 

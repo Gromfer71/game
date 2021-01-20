@@ -15,8 +15,7 @@ class ItemController extends Controller
     }
     public function index()
     {
-        $items = Auth::user()->items();
-
+        $items =   Auth::user()->items()->with('baseItem')->get();
         return view('auth.items.index', ['items' => $items]);
     }
 

@@ -26,24 +26,28 @@ class UpdateUser
      */
     public function handle($request, Closure $next)
     {
-        app(BuildingsHandler::class)->setUser(Auth::user());
-        app(TroopHandler::class)->setUser(Auth::user());
+        $user = Auth::user();
+
+        app(BuildingsHandler::class)->setUser($user);
+        app(TroopHandler::class)->setUser($user);
 
         if (SystemMessage::everydayGift()) {
-            app(MailHandler::class)->everydayGift(Auth::id());
+            app(MailHandler::class)->everydayGift($user->id);
         }
 
-        if (Auth::user()->checkTimeToAddResources()) {
-            Auth::user()->ResourcesIncome();
+        if ($user->checkTimeToAddResources()) {
+            $user->ResourcesIncome();
         }
 
         app(BuildingsHandler::class)->checkBuildingsFinished();
         app(TroopHandler::class)->checkTrainEnd();
 
 
-        Auth::user()->updateLastCheck();
-        Auth::user()->last_active = time();
-        Auth::user()->saveOrFail();
+        $user->updateLastActive();
+        if ($user->isDirty()) {
+            $user->saveOrFail();
+        }
+
         return $next($request);
     }
 

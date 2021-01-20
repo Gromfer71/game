@@ -33,7 +33,7 @@ class WelcomeController extends Controller
             [
                 'date'       => Carbon::now(),
                 'online'     => User::online()->count(),
-                'usersCount' => User::all()->count(),
+                'usersCount' => User::count(),
             ]
         );
     }

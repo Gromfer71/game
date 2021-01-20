@@ -19,10 +19,10 @@ class BuildingsHandler
     {
         if (!$this->user->validateSubRes(
             new Resources(
-                $this->building->baseBuilding()->food_up,
-                $this->building->baseBuilding()->wood_up,
-                $this->building->baseBuilding()->iron_up,
-                $this->building->baseBuilding()->mithril_up,
+                $this->building->baseBuilding->food_up,
+                $this->building->baseBuilding->wood_up,
+                $this->building->baseBuilding->iron_up,
+                $this->building->baseBuilding->mithril_up,
             )
         )) {
             return  __('mes.notEnoughRes');
@@ -40,7 +40,7 @@ class BuildingsHandler
         DB::transaction(
             function () {
                 $this->building->upgrade();
-                $this->user->subRes(Resources::createFromModel($this->building->baseBuilding()));
+                $this->user->subRes(Resources::createFromModel($this->building->baseBuilding));
                 $this->building->saveOrFail();
             }
         );
@@ -50,12 +50,12 @@ class BuildingsHandler
 
     public function checkBuildingsFinished()
     {
-        foreach ($this->user->userBuildings() as $building) {
+        foreach ($this->user->userBuildings as $building) {
             if ($building->checkFinishUpgrade()) {
                 SystemMessage::factory()->create(
                     [
                         'title' => __('mes.upgrade.finishedMail.title'),
-                        'message' => __('mes.upgrade.finishedMail.text', ['category' => __('mes.'.$building->baseBuilding()->category)]),
+                        'message' => __('mes.upgrade.finishedMail.text', ['category' => __('mes.'.$building->baseBuilding->category)]),
                     ]
                 );
                 $building->save();
@@ -72,7 +72,7 @@ class BuildingsHandler
     }
 
     /**
-     * @param  \App\Models\UserBuilding  $building
+     * @param Mixed $building
      */
     public function setBuilding(UserBuilding $building)
     :void {
