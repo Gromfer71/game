@@ -1,3 +1,5 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 *{
 	padding: 0;
 	margin: 0;
@@ -467,7 +469,7 @@ ul li:before{
 
     width: 275px;
     height: 40px;
-    left: 150px;
+    left: 100px;
     margin-top: 5px;
     display: inline-flex;
 }
@@ -614,5 +616,69 @@ hr {
     right: 300px;
     top: 50px;
 }
+isa_info, .isa_success, .isa_warning, .isa_error {
+    text-align: center;
+    font-size: 16px;
+    padding:12px;
+
+}
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+    font-size:2em;
+    vertical-align:middle;
+}
+.flex {
+    display: flex;
+    margin: 10px;
+}
+progress {
+    display:block;
+    width:190px;
+    height:20px;
+    padding:15px 0 0 0;
+    margin:0;
+    background:none;
+    border: 0;
+    border-radius: 15px;
+    text-align: left;
+    position:relative;
+    top: -55px;
+    left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+progress::-webkit-progress-bar {
+    height:11px;
+    width:150px;
+    margin:0 auto;
+    background-color: #CCC;
+    border-radius: 15px;
+    box-shadow:0px 0px 6px #777 inset;
+}
+progress::-webkit-progress-value {
+    display:inline-block;
+    float:left;
+    height:11px;
+    margin:0px -10px 0 0;
+    background: #F70;
+    border-radius: 15px;
+    box-shadow:0px 0px 6px #777 inset;
+}
+
 
 

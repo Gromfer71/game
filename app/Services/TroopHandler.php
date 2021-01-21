@@ -12,8 +12,16 @@ class TroopHandler
 {
     private User $user;
 
+    /**
+     * @param \Illuminate\Support\Collection $troops
+     *
+     * @return array|bool|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Translation\Translator|string|null
+     */
     public function trainValidate($troops)
     {
+        if($troops->avg() === 0) {
+            return __('mes.troops.zeroRequest');
+        }
         if (TrainTroop::where('user_id', $this->user->id)->get()->isNotEmpty()) {
             return __('mes.troops.alreadyTraining');
         }

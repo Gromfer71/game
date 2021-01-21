@@ -20,18 +20,13 @@
 <body>
 
 <div class="container">
-    @if($errors->any())
-        <div class="center">
-            <h1>{{$errors->first()}}</h1>
-        </div>
-    @endif
     @if(session('ok'))
-            <div class="center">
+            <div class="isa_success">
                 <h1>{{session('ok')}}</h1>
             </div>
     @endif
     @if(session('error'))
-        <div class="center">
+        <div class="isa_error">
             <h1>{{session('error')}}</h1>
         </div>
     @endif

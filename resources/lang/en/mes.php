@@ -29,6 +29,10 @@ return [
     //troops
     'troops.trainStart' => 'Обучение началось.',
     'troops.alreadyTraining' => 'Войска уже обучаются!',
+    'troops.zeroRequest' => 'Ничего не выбрано!',
+
+    'warrior1' => 'Воин со щитом',
+    'warrior2' => 'Воин с копьем',
 
 
 ];

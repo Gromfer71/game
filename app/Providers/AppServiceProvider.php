@@ -1,4 +1,18 @@
-<?php
+<?php /** @noinspection GrazieInspection */
+
+/** @noinspection GrazieInspection */
+
+/** @noinspection GrazieInspection */
+
+/** @noinspection GrazieInspection */
+
+/** @noinspection ALL */
+
+/** @noinspection ALL */
+
+/** @noinspection ALL */
+
+/** @noinspection ALL */
 
 namespace App\Providers;
 
@@ -12,7 +26,7 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register any application staff.
      *
      * @return void
      */

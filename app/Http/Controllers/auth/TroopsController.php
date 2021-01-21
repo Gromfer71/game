@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\BaseTroop;
 use App\Services\TroopHandler;
+use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class TroopsController extends Controller
 {
@@ -15,7 +18,24 @@ class TroopsController extends Controller
 
     public function index()
     {
-        return view('auth.troops.index');
+        // Если войска уже тренируются рендерим спец вьюшку
+        if (Auth::user()->trainTroops()->count() > 0 && Auth::user()->train_time !== null) {
+            return view(
+                'auth.troops.alreadyTrain',
+                [
+                    'troops' => Auth::user()->trainTroops()->with('baseTroop')->get(),
+                    'time'   => Carbon::createFromTimestamp(Auth::user()->train_time - time())->format('H:i:s'),
+                ]
+            );
+        }
+
+        $base = BaseTroop::all();
+        $base->map(
+            function ($item) {
+                $item->cost = json_decode($item->cost);
+            }
+        );
+        return view('auth.troops.index', ['base' => $base]);
     }
 
     public function train(Request $request, TroopHandler $handler)
