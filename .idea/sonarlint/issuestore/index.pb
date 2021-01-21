@@ -681,9 +681,6 @@ j
 :coverage/Http/Controllers/guest/WelcomeController.php.html,7\e\7e5ac70d5b228b8ff8dfb82a9cc7f743ea7bbc38
 C
 config/database.php,6\9\69e3bd8ddf957a32ec5a3b80a87f8cc4bfe36a27
-:
-
-report.xml,b\8\b848cd2eab04c7f1b39bbfa574cce2e12c2119a0
 T
 $tests/Feature/Buildings/ShowTest.php,b\f\bfc377912cc748336ca7f98c5bc89b1fdee03b37
 Q
@@ -750,3 +747,5 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 b
 2resources/views/auth/troops/alreadyTrain.blade.php,7\5\75f9f3ea30182c8df47b25b51afb0decc9a6d716
+E
+.phpunit.result.cache,2\d\2d329044c6b41bffeb5f66966b019084792bc4ba
