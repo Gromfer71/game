@@ -30,7 +30,7 @@ class MailHandler
             [
                 'category' => 'system',
                 'to' => $userId,
-                'title' => "Ежедневный подарок",
+                'title' => 'Ежедневный подарок',
                 'message' => 'Ежедневный подарок',
                 'items' => json_encode(self::EVERYDAY_GIFT),
             ]);

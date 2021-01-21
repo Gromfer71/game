@@ -25,8 +25,6 @@ J
 app/Exceptions/Handler.php,3\b\3badd23b42804fa4016b5b9734a7b35c12ec27e4
 Z
 *database/factories/UserBuildingFactory.php,d\b\db26f2ba7cddf4ea017f7f6fa852a2223bcd8759
-I
-resources/lang/en/mes.php,5\f\5fa90f5771ac7a2f1bf2de2b47d4115a1589b2a0
 C
 public/css/null.css,0\b\0b9c82a1023d02528fc13331c199c975d5844231
 `
@@ -133,8 +131,6 @@ A
 bootstrap/app.php,f\4\f4e0869689d9f3473be5a60831013b90d22203ca
 L
 bootstrap/cache/services.php,9\7\9741c669fc7a53e34cadd20da50466c855f6aa8b
-P
- resources/lang/en/validation.php,4\1\415ab399aa4b8223835e497dabc8646127974fbd
 `
 0app/Http/Controllers/guest/WelcomeController.php,e\f\ef5323debdf5f627e22aa51b1b603b62557b6b97
 T
@@ -197,8 +193,6 @@ T
 $resources/views/errors/404.blade.php,c\3\c30a91570c5ca5e6f4ad6c2a470e253e2ccf2c90
 j
 :.idea/dataSources/2547cf95-ce44-4c2d-8329-c80a1ff5e494.xml,8\0\80810bd4f25bd0bb041ec674827817a4ab54fe88
-U
-%resources/views/errors/5050.blade.php,a\2\a2f548c741c312fbe38372e00b0ae49d06672531
 F
 _ide_helper_models.php,1\b\1b6b8a1570f16f8ab6a0c98b18e9a4092a16a1d9
 B
@@ -749,3 +743,7 @@ b
 2resources/views/auth/troops/alreadyTrain.blade.php,7\5\75f9f3ea30182c8df47b25b51afb0decc9a6d716
 E
 .phpunit.result.cache,2\d\2d329044c6b41bffeb5f66966b019084792bc4ba
+P
+ resources/lang/ru/validation.php,8\0\80923479393fb1e1269c8e16600a2dc31cebb9a3
+I
+resources/lang/ru/mes.php,b\8\b828a75506164517a32993791172a0561b8ebe02

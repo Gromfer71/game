@@ -35,8 +35,3 @@ Route::get('map/monsters', 'Auth\MonstersController@index')->name('monsters.inde
 Route::post('map/monsters/attack', 'Auth\MonstersController@attack')->name('monsters.attack');
 
 
-Route::get('/gg', function () {
-    return '1';
-});
-
-

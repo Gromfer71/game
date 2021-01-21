@@ -155,7 +155,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', "laravel8"),
+    'domain' => env('SESSION_DOMAIN', "laravel"),
 
     /*
     |--------------------------------------------------------------------------
