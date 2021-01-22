@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /** */
-class base_troops extends Seeder
+class base_troopsSeeder extends Seeder
 {
     private $data;
 

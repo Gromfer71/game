@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class base_monsters extends Seeder
+class base_monstersSeeder extends Seeder
 {
     private $data = [
         ['lv' => '1', 'power' => 1000, 'reward' => 1],
@@ -22,7 +22,7 @@ class base_monsters extends Seeder
      */
     public function run()
     {
-        foreach ($this->data as $datum) {
+        /*foreach ($this->data as $datum) {
             DB::table('base_monsters')->insert(
                 [
                     'lv'    => $datum['lv'],
@@ -30,6 +30,6 @@ class base_monsters extends Seeder
                     'reward' => $datum['reward'],
                 ]
             );
-        }
+        }*/
     }
 }

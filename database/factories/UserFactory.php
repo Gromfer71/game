@@ -33,6 +33,7 @@ class UserFactory extends Factory
             'last_active' => time(),
             'last_check' => time(),
             'max_building_upgrades' => 1,
+            'train_time' => null,
 
         ];
     }

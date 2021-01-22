@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class base_items extends Seeder
+class base_itemsSeeder extends Seeder
 {
     /** @var array[]  */
     private const DATA = [
