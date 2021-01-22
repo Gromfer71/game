@@ -19,7 +19,7 @@ class SystemMessages extends Migration
             $table->integer('to');
             $table->string('title');
             $table->text('message');
-            $table->string('items');
+            $table->string('items')->nullable();
             $table->tinyInteger('is_read')->default('0');
             $table->tinyInteger('is_items_got')->default('0');
             $table->timestamp('created_at')->default(now());

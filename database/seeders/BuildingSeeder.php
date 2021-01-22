@@ -18,7 +18,7 @@ class BuildingSeeder extends Seeder
         $w = 60 * 60 * 24 * 7;
         $this->data = [
             '1'  => [
-                'lv' =>'1',
+                'lv' =>'0',
                 'category'   => 'castle',
                 'food_up'    => 100,
                 'wood_up'    => 100,
@@ -32,7 +32,7 @@ class BuildingSeeder extends Seeder
                 'time_up'    => 10 * $m,
             ],
             '2'  => [
-                'lv' => '2',
+                'lv' => '1',
                 'category'   => 'castle',
                 'food_up'    => 100,
                 'wood_up'    => 100,
@@ -46,7 +46,7 @@ class BuildingSeeder extends Seeder
                 'time_up'    => 10 * $m,
             ],
             '3'  => [
-                'lv' => 1,
+                'lv' => 0,
                 'category'   => 'platz',
                 'food_up'    => 100,
                 'wood_up'    => 100,
@@ -67,7 +67,7 @@ class BuildingSeeder extends Seeder
             DB::table('buildings')->insert(
                 [
                     'category' => $build['category'],
-                    'lv'          => $key,
+                    'lv'          => $build['lv'],
                     'food_up'     => $build['food_up'],
                     'wood_up'     => $build['wood_up'],
                     'iron_up'     => $build['iron_up'],
