@@ -22,7 +22,6 @@ class RegisterTest extends TestCase
             route('register'),
             ['login' => 'user', 'password' => '123', 'password_confirmation' => '123']
         );
-        $this->assertAuthenticated();
         $this->assertDatabaseHas('users', ['login' => 'user']);
         $response->assertLocation('/home');
     }

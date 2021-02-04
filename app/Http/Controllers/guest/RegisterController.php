@@ -4,6 +4,7 @@ namespace App\Http\Controllers\guest;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
@@ -49,7 +50,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'login' => ['required', 'string', 'max:255'],
+            'login' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:1', 'confirmed'],
         ]);
     }

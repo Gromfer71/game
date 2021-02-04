@@ -7,28 +7,51 @@
 @section('content')
 
     @include('templates.contentHeader', ['title' => 'Онлайн', 'backUrl' => ''])
-    <div class="content__links">
+    <div class="uk-container uk-container-small uk-background-default">
         @foreach($users as $user)
-
-            <div class="links__item short">
-                {{ $user->login }}
+            <div class="uk-card uk-card-default uk-flex uk-flex-between uk-padding-small uk-border-rounded">
+                <div>
+                    <h3 class="uk-card-title uk-width-1-3">{{ $user->login }}</h3>
+                </div>
+                <div class="uk-width-1-3">
+                    <a href="{{ route('dialog', $user->id) }}" class="uk-button uk-button-primary">Написать</a>
+                </div>
             </div>
-            @if($user->id != Auth::user()->id)
-                <a href="{{ route('dialog', $user->id) }}">
-                    <img class="btn_link" src="{{ asset("img/btn_brown.png") }}" alt="">
-                    <span class="btn">
-                        Написать
-                    </span>
-                </a>
-            @else
-                <a href="#">
-                    <img class="btn_link" src="{{ asset("img/btn_brown.png") }}" alt="">
-                    <span class="btn">
-                    Это Вы
-                </span>
-                </a>
-            @endif
-
         @endforeach
+            {{ $users->links('vendor.pagination.default') }}
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{{--        @foreach($users as $user)--}}
+
+{{--            <div class="links__item short">--}}
+{{--                {{ $user->login }}--}}
+{{--            </div>--}}
+{{--            @if($user->id != Auth::user()->id)--}}
+{{--                <a href="{{ route('dialog', $user->id) }}">--}}
+{{--                    <img class="btn_link" src="{{ asset("img/btn_brown.png") }}" alt="">--}}
+{{--                    <span class="btn">--}}
+{{--                        Написать--}}
+{{--                    </span>--}}
+{{--                </a>--}}
+{{--            @else--}}
+{{--                <a href="#">--}}
+{{--                    <img class="btn_link" src="{{ asset("img/btn_brown.png") }}" alt="">--}}
+{{--                    <span class="btn">--}}
+{{--                    Это Вы--}}
+{{--                </span>--}}
+{{--                </a>--}}
+{{--            @endif--}}
+
+{{--        @endforeach--}}
 @endsection

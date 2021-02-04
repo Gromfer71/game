@@ -48,8 +48,10 @@ class UseItemTest extends TestCase
 
         $this->get(route('items'));
 
-        $response = $this->post(route('items.use', ['id' => $item->id, 'count' => 0]));
-        $this->assertTrue(get_class($response->exception) == InvalidArgumentException::class);
+        $this->post(route('items.use', ['id' => $item->id, 'count' => 0]))
+            ->assertStatus(302)
+            ->assertSessionHas('error', __('mes.zeroChoose'));
+
     }
 
     public function test_item_invalid_id()

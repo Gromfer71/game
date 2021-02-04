@@ -94,7 +94,7 @@ class MailController extends Controller
         $message->is_items_got = 1;
         $message->save();
 
-        return back();
+        return back()->with('ok','Предметы получены');
     }
 
     /**

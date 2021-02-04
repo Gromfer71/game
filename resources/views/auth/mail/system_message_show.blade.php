@@ -1,66 +1,46 @@
 @extends('layouts.header')
 <title>Системные сообщения</title>
-@section('styles')
-@endsection
 
 @section('content')
-    <?php
-    /** @var \App\Models\SystemMessage $message
-     * @var Array $items
-     */
-    ?>
-
     @include('templates.contentHeader', ['backUrl' => route('systemMessages'), 'title' => $message->title ])
 
-
-    <div class="ui_back">
-        <hr>
-        <div class="system__title">
-            <div class="title__title">
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-header uk-flex-between">
+            <div class="uk-card-title">
                 {{ $message->title }}
             </div>
-            <div class="title__date">
+            <div class="uk-align-right">
                 {{ $message->created_at}}
             </div>
         </div>
-        <hr>
-        <img src="{{ asset('img/default_bg.jpg') }}" width="490px" alt="">
-
-        <br><br>
-        <div style="text-align: center">
+        <div class="uk-card-body uk-text-center">
             {{ $message->message}}
         </div>
-        <br><br>
-        <div class="system_messages__items">
+        <div class="uk-card-body">
             @if($items)
                 @foreach($items as $item)
-                    <div class="items__flex">
-                        <div class="flex__item">
+                    <div class="uk-flex uk-margin uk-child-width-1-3">
+                        <div class="">
                             <img src="{{ asset('img/'.$item->name.$item->quality.".png") }}" alt="food_chest">
-                            <span class="item__text">
-                        {{ __("mes.".$item->name.$item->quality) }}
-                    </span>
                         </div>
-                        <div class="flex__item">
-                     <span class="item__text">
-                         {{ $item->count }}
-                     </span>
+                        <div>
+                            <span class="uk-text-large">{{ __("mes.".$item->name.$item->quality) }}</span>
+                        </div>
+                        <div class="uk-text-large">
+                            {{ $item->count }}
                         </div>
                     </div>
                 @endforeach
-        </div>
-        <div class="center">
-            <form action="{{ route('systemMessages.takeItems') }}" method="POST">
-                @csrf
-                <input type="text" name="id" value="{{ $message->id }}" hidden>
-                <button class="btn @if(!$message->is_items_got)  fufei @else grey @endif"
-                        @if($message->is_items_got) disabled @endif >
-                    Забрать
-                </button>
-            </form>
+                    <form action="{{ route('systemMessages.takeItems') }}" method="POST">
+                        @csrf
+                        <input type="text" name="id" value="{{ $message->id }}" hidden>
+                        @if($message->is_items_got)
+                            <button  type="submit" class="uk-button uk-button-secondary uk-disabled">Предметы получены</button>
+                        @else
+                        <button  type="submit" class="uk-button uk-button-primary">Забрать</button>
+                        @endif
+                    </form>
             @endif
         </div>
-
-
     </div>
 @endsection

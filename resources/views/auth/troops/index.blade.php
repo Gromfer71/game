@@ -85,6 +85,7 @@
                 woodcount = 0;
                 ironcount = 0;
                 mithrilcount = 0;
+
             })
         })
 

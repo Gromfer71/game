@@ -1,8 +1,6 @@
 
 J
 bootstrap/cache/.gitignore,0\6\06672a5871e24c2c15a8352cb57a2775779024eb
-P
- database/seeders/base_troops.php,9\9\99a7883cfbaa9ade566a6e216f895c1c7de819fd
 W
 'bootstrap/cache/livewire-components.php,4\8\487dc85784502f02c7a00e9c8cd5ed92cf3a8733
 S
@@ -209,10 +207,6 @@ U
 %app/Providers/AuthServiceProvider.php,a\5\a526ceaeed37cec3622903d924e7bbaf01d42971
 ^
 .coverage/Providers/AuthServiceProvider.php.xml,8\8\88690fac2105a6f155ae09c7a5004b798e4675b7
-O
-database/seeders/base_items.php,e\a\ea5de5c38b00ba61efd94170d0e4d5be276ffff6
-R
-"database/seeders/base_monsters.php,0\b\0b7805f572a9141bb188155f6d7de9679b96d7d3
 G
 app/Models/BaseItem.php,1\0\10dd579ed1fb82de51f210609fcc3254ed6e5e23
 X
@@ -241,8 +235,6 @@ Z
 *coverage/Services/BuildingsHandler.php.xml,e\d\ed2c6560a040b0bea5657f6001c2bc70820148b6
 @
 config/cache.php,8\5\85b552139c7f666652636ddf8db9133860f81e48
-Q
-!database/seeders/CastleSeeder.php,f\c\fcc25994bc16d397a236a0a7c0c271af40936aef
 q
 Acoverage/Http/Controllers/guest/ConfirmPasswordController.php.xml,4\3\4397717150d10df9239ee1757404656199a447f1
 a
@@ -305,8 +297,6 @@ e
 5coverage/Http/Controllers/auth/HomeController.php.xml,3\4\343e2c9f0fa4b4ed30ad0b0c456e6d0bae6ab56e
 Z
 *resources/views/auth/items/index.blade.php,c\c\cc93fa3d5a7c9028789a28a0102101869c35990c
-X
-(resources/views/auth/pve/index.blade.php,a\8\a8887cbd4b9bc6197da5b23279bb31abf2cd807a
 Q
 !coverage/Models/Models/index.html,5\9\59c1f429311b29fbf3f6e3fc77e59114db55cd04
 Q
@@ -755,3 +745,31 @@ d
 4database/migrations/2021_01_21_174513_base_items.php,e\7\e75a149ce0f231662bb4bbda137b6a14a68b07c8
 _
 /database/migrations/2021_01_21_175156_items.php,a\3\a3199484e2a79d3df68516e1bb7f9e8908376f86
+c
+3database/migrations/2021_01_22_062047_buildings.php,d\a\da024e3e6d7a9acc2464ba52d04fc27c918f09ff
+h
+8database/migrations/2021_01_22_062413_user_buildings.php,7\5\75049f922674a51cde25dc5f236556671a67aa88
+e
+5database/migrations/2021_01_22_062542_base_troops.php,e\3\e3a493c70031c93b716a36659c0c1d6449a9dcf7
+`
+0database/migrations/2021_01_22_062659_troops.php,4\a\4a118b1ccdf99967284fae12d799ae1e266c4f44
+f
+6database/migrations/2021_01_22_062813_train_troops.php,2\7\2798ae943528aa6315c98cd7eccc2cc28c88ea95
+U
+%database/seeders/base_itemsSeeder.php,9\9\99a56642b02d1773ea9c2378ddb2d657e96e627d
+X
+(database/seeders/base_monstersSeeder.php,0\e\0ec2ae9e6d5dede3e95dce05ace8064ee58ff2b9
+V
+&database/seeders/base_troopsSeeder.php,c\9\c968bf43f0c99fcbce8579033f0b94d106ae4653
+S
+#database/seeders/BuildingSeeder.php,9\4\9442b8000682f22dec287e593a50e086a7a85847
+]
+-resources/views/auth/troops/details.blade.php,4\2\427119b430772709f0ef4888acdad71c70e2e198
+`
+0app/Http/Controllers/auth/MonstersController.php,5\c\5c73c19768940dc4b173a76b890ab562114b2c56
+]
+-resources/views/auth/monsters/index.blade.php,b\2\b208a90efb6e414e41cfaa5c9dea622eb44585d6
+D
+public/css/style.css,1\e\1ef0e38ec90181a17549647e1a67072ac5d804da
+c
+3resources/views/vendor/pagination/default.blade.php,4\9\49a506f60b4f465c9cd12984d3eab888759fc308

@@ -21,6 +21,10 @@ class ItemController extends Controller
 
     public function use(Request $request)
     {
+        if($request->count == 0) {
+            return back()->with('error', __('mes.zeroChoose'));
+        }
+
         ItemUsage::use($request->input('id'), $request->input('count'));
 
         return redirect(route('items'));

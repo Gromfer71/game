@@ -26,12 +26,14 @@ Route::post('buildings/upgrade', 'Auth\BuildingController@upgrade')->name('build
 Route::get('items', 'Auth\ItemController@index')->name('items');
 Route::post('items/use', 'Auth\ItemController@use')->name('items.use');
 
-//train troops
+// troops
 Route::get('train_troops', 'Auth\TroopsController@index')->name('troops.index');
 Route::POST('train_troops/train', 'Auth\TroopsController@train')->name('troops.train');
+Route::get('troops', 'Auth\TroopsController@details')->name('troops.details');
 
 //PVE
-Route::get('map/monsters', 'Auth\MonstersController@index')->name('monsters.index');
-Route::post('map/monsters/attack', 'Auth\MonstersController@attack')->name('monsters.attack');
+Route::get('monsters', 'Auth\MonstersController@index')->name('monsters.search');
+Route::get('monsters/details', 'Auth\MonstersController@showMonster')->name('monsters.showMonster');
+Route::post('monsters/attack', 'Auth\MonstersController@attack')->name('monsters.attack');
 
 

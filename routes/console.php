@@ -20,4 +20,5 @@ Artisan::command('inspire', function () {
     DB::statement("ALTER TABLE `data`.`system_messages` AUTO_INCREMENT=1;");
     DB::statement("ALTER TABLE `data`.`user_buildings` AUTO_INCREMENT=1;");
     DB::statement("ALTER TABLE `data`.`buildings` AUTO_INCREMENT=1;");
+    dd(1);
 });

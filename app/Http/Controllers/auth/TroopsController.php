@@ -49,4 +49,14 @@ class TroopsController extends Controller
 
         return back()->with('ok', __('mes.troops.trainStart'));
     }
+
+    public function details()
+    {
+        $troops = Auth::user()->troops()->with('baseTroop')->get();
+        $troops->map(function ($troop) {
+            $troop->baseTroop->char = json_decode($troop->baseTroop->char);
+        });
+
+        return view('auth.troops.details', ['troops' => $troops]);
+    }
 }

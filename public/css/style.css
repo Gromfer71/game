@@ -1,0 +1,8 @@
+body {
+    background: url("../img/bg.jpeg") no-repeat;
+    width: 2560px;
+    height: 1440px;
+}
+body {
+    background: url("../img/bg.jpg") 100% repeat;
+}

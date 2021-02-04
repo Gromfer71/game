@@ -100,9 +100,6 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
-    protected $hidden = [
-        'password',
-    ];
 
     public function subRes(Resources $resources)
     {
