@@ -43,6 +43,7 @@ class BuildingController extends Controller
         $building = UserBuilding::findOrFail($id);
         $properties = json_decode(UserBuilding::findOrFail($id)->baseBuilding->properties);
         return view('auth.buildings.details', compact('building', 'properties'));
+
     }
 
     public function upgrade(Request $request, BuildingsHandler $handler)
