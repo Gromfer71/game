@@ -33,6 +33,7 @@ class HomeController extends Controller
 
     public function showOnline()
     {
+        //User::factory()->count(20)->create();
         return view('auth.showOnline', ['users' => User::online()->paginate(10)]);
     }
 }
