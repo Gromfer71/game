@@ -32,6 +32,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Message whereToLogin($value)
  * @method static Builder|Message messagesWith($value)
  * @mixin \Eloquent
+ * @property string|null $updated_at
+ * @method static Builder|Message whereUpdatedAt($value)
  */
 class Message extends Model
 {

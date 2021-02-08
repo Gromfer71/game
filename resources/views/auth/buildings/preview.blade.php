@@ -23,30 +23,17 @@
                     <div class="uk-flex">
                     @if($building->lv_upping_time > time())
                             <div class="uk-text-large uk-margin-left">
-                                Осталось:
+                                Осталось: &emsp;
                             </div>
-                            <div class="uk-grid-small uk-child-width-auto uk-margin-left" uk-grid
-                                 uk-countdown="date: {{ \Illuminate\Support\Carbon::createFromTimestamp($building->lv_upping_time)->toIso8601String() }}">
-                                <div>
-                                    <div class="uk-countdown-number uk-countdown-days uk-text-large"></div>
-                                </div>
-                                <div class="uk-countdown-separator uk-text-large">:</div>
-                                <div>
-                                    <div class="uk-countdown-number uk-countdown-hours uk-text-large"></div>
-                                </div>
-                                <div class="uk-countdown-separator uk-text-large">:</div>
-                                <div>
-                                    <div class="uk-countdown-number uk-countdown-minutes uk-text-large"></div>
-                                </div>
-                                <div class="uk-countdown-separator uk-text-large">:</div>
-                                <div>
-                                    <div class="uk-countdown-number uk-countdown-seconds uk-text-large"></div>
-                                </div>
-                            </div>
+                            @include('templates.countDown', ['time' => $building->lv_upping_time])
                     @else
                         <a href="{{ route('buildingUpgradeMenu', $building->id) }}"
                             class="uk-button uk-button-primary uk-align-left uk-margin-large-left  uk-margin-top">
-                         123
+                            @if($building->baseBuilding->lv == 0)
+                                Построить
+                            @else
+                                Улучшить
+                            @endif
                         </a>
                     @endif
 

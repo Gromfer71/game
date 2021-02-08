@@ -79,7 +79,7 @@ class UpgradeTest extends TestCase
         $this->post(route('buildingUpgrade', ['id' => $this->castle->id]));
         $this->castle->lv_upping_time = 1;
         $this->castle->save();
-        $this->get('/home');
+        $this->get(route('buildings'));
         $this->assertNull($this->castle->refresh()->lv_upping_time);
         $this->assertEquals(1, $this->castle->baseBuilding->lv);
     }

@@ -24,7 +24,7 @@ class TroopsController extends Controller
                 'auth.troops.alreadyTrain',
                 [
                     'troops' => Auth::user()->trainTroops()->with('baseTroop')->get(),
-                    'time'   => Carbon::createFromTimestamp(Auth::user()->train_time - time())->format('H:i:s'),
+                    'time'   => Auth::user()->train_time,
                 ]
             );
         }

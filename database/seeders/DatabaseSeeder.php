@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(base_itemsSeeder::class);
-        $this->call(base_monstersSeeder::class);
+        $this->call(monstersSeeder::class);
         $this->call(base_troopsSeeder::class);
         $this->call(BuildingSeeder::class);
     }

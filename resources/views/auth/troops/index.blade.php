@@ -4,47 +4,63 @@
 @section('content')
     @include('templates.contentHeader', ['title' => "Тренировать войска", 'backUrl' => ''])
 
-    <div class="ui_back">
-        <form action="{{ route('troops.train') }}" method="POST">
-            @csrf
-            <img src="{{ asset('img/warrior1.png') }}" alt="">
-            <label>
-                Воин
-                <input type="range" min="0" max="100" step="1" value="0" name="1">
-            </label>
-            <span id="war1"></span>
-            <br>
-            <hr>
-            <br>
-            <img src="{{ asset('img/warrior2.png') }}" alt="">
-            <label>
-                Копейщик
-                <input type="range" min="0" max="100" step="1" value="0" name="2">
-            </label>
-            <span id="war2"></span>
-            <div class="flex" id="res">
-                <div class="resources__item">
+    <form action="{{ route('troops.train') }}" method="POST">
+        @csrf
+        <div class="uk-card uk-card-default uk-card-body uk-margin-bottom">
+            <div class="uk-flex uk-flex-around">
+                <div>
+                    <div class="uk-text-center uk-margin-bottom">
+                        Воин
+                    </div>
+                    <div class="uk-margin-bottom">
+                        <img src="{{ asset('img/warrior1.png') }}" alt="">
+                    </div>
+                    <div>
+                        <input type="range" class="uk-width-4-5" min="0" max="100" step="1" value="0" name="1">
+                        <span id="war1">0</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-text-center uk-margin-bottom">
+                        Копейщик
+                    </div>
+                    <div class="uk-margin-bottom">
+                        <img src="{{ asset('img/warrior2.png') }}" alt="">
+                    </div>
+                    <div>
+                        <input type="range" class="uk-width-4-5" min="0" max="100" step="1" value="0" name="2">
+                        <span id="war2">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-card-default">
+            <div class="uk-flex uk-padding-small uk-flex-middle" id="res">
+                <div class="uk-margin-right uk-width-1-4">
                     <img src="{{ asset("img/icons/ui_food.png") }}" alt="foodicon">
                     <span id="food">0</span>
                 </div>
-                <div class="resources__item">
-                    <img src="{{ asset("img/icons/ui_wood.png") }}" alt="foodicon">
+                <div class="uk-margin-right uk-width-1-4">
+                    <img src="{{ asset("img/icons/ui_wood.png") }}" alt="woodicon">
                     <span id="wood">0</span>
                 </div>
-                <div class="resources__item">
-                    <img src="{{ asset("img/icons/ui_iron.png") }}" alt="foodicon">
+                <div class="uk-margin-right uk-width-1-4">
+                    <img src="{{ asset("img/icons/ui_iron.png") }}" alt="ironicon">
                     <span id="iron">0</span>
                 </div>
-                <div class="resources__item">
-                    <img src="{{ asset("img/icons/ui_mithril.png") }}" alt="foodicon">
+                <div class="uk-margin-right uk-width-1-4">
+                    <img src="{{ asset("img/icons/ui_mithril.png") }}" alt="mithrilicon">
                     <span id="mithril">0</span>
                 </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-margin-auto-vertical" type="submit">
+                        Тренировать
+                    </button>
+                </div>
             </div>
-            <div>
-                <button class="btn fufei" type="submit">Тренировать</button>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
 
     <script>
         $('document').ready(function () {
@@ -85,10 +101,7 @@
                 woodcount = 0;
                 ironcount = 0;
                 mithrilcount = 0;
-
             })
         })
-
     </script>
-
 @endsection

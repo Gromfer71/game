@@ -27,4 +27,5 @@ class BaseItem extends Model
 
     protected $guarded = [];
     public $timestamps = false;
+    public  $primaryKey = 'base_id';
 }

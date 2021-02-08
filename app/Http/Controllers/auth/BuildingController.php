@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types = 1);
-
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -21,10 +19,14 @@ class BuildingController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
     public function index()
     {
+
+        app(BuildingsHandler::class)->checkBuildingsFinished();
+
         return view(
             'auth.buildings.preview',
             ['buildings' => Auth::user()->userBuildings()->with('baseBuilding')->get()]
@@ -41,7 +43,7 @@ class BuildingController extends Controller
     public function show($id)
     {
         $building = UserBuilding::findOrFail($id);
-        $properties = json_decode(UserBuilding::findOrFail($id)->baseBuilding->properties);
+        $properties = json_decode($building->baseBuilding->properties);
         return view('auth.buildings.details', compact('building', 'properties'));
 
     }

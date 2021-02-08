@@ -28,7 +28,7 @@ class UpdateUser
     {
         $user = Auth::user();
 
-        app(BuildingsHandler::class)->setUser($user);
+        app(BuildingsHandler::class)->setUser(Auth::user());
         app(TroopHandler::class)->setUser($user);
 
         if (SystemMessage::everydayGift()) {
@@ -39,7 +39,7 @@ class UpdateUser
             $user->ResourcesIncome();
         }
 
-        app(BuildingsHandler::class)->checkBuildingsFinished();
+
         app(TroopHandler::class)->checkTrainEnd();
 
 

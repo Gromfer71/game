@@ -23,7 +23,6 @@ class HomeController extends Controller
 
     public function index()
     {
-
         return view(
             'auth.home',
             [
@@ -34,7 +33,6 @@ class HomeController extends Controller
 
     public function showOnline()
     {
-
         return view('auth.showOnline', ['users' => User::online()->paginate(10)]);
     }
 }

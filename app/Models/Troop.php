@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Troop whereTroopId($value)
  * @method static Builder|Troop whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\BaseTroop|null $baseTroop
  */
 class Troop extends Model
 {

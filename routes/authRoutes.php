@@ -33,7 +33,7 @@ Route::get('troops', 'Auth\TroopsController@details')->name('troops.details');
 
 //PVE
 Route::get('monsters', 'Auth\MonstersController@index')->name('monsters.search');
-Route::get('monsters/details', 'Auth\MonstersController@showMonster')->name('monsters.showMonster');
-Route::post('monsters/attack', 'Auth\MonstersController@attack')->name('monsters.attack');
+Route::post('monsters/details', 'Auth\MonstersController@monsterInfo')->name('monsters.monsterInfo');
+
 
 

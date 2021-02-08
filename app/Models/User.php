@@ -10,12 +10,12 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Ramsey\Uuid\Type\Time;
 
 /**
  * App\Models\User
  *
  * @property int
- *
  * @property string
  *               $login
  * @property string
@@ -80,6 +80,16 @@ use Illuminate\Notifications\Notifiable;
  *               $wood
  * @property int|null $train_time
  * @method static Builder|User whereTrainTime($value)
+ * @property int $id
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Item[] $items
+ * @property-read int|null $items_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SystemMessage[] $systemMessages
+ * @property-read int|null $system_messages_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\TrainTroop[] $trainTroops
+ * @property-read int|null $train_troops_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Troop[] $troops
+ * @property-read int|null $troops_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\UserBuilding[] $userBuildings
  */
 class User extends Authenticatable
 {
@@ -88,7 +98,7 @@ class User extends Authenticatable
     use UserRelations;
 
     /** @var int Интервал времени для начисления ресурсов (чем больше, тем реже будут запросы) */
-    private const TIME_ADD_RESOURCES    = 1;
+    private const TIME_ADD_RESOURCES    = 10;
 
     /** @var int Время, при котором если пользователь не проявлял активность, он считается как оффлайн. */
     private const TIME_TO_OFFLINE       = 9999999;
@@ -143,7 +153,7 @@ class User extends Authenticatable
         $res = new Resources();
         foreach ($this->userBuildings()->with('baseBuilding')->get() as $building) {
             if ($building->baseBuilding->category === 'castle') {
-                $properties = json_decode($building->baseBuilding()->first()->properties);
+                $properties = json_decode($building->baseBuilding->properties);
                 $res->add(
                     new Resources(
                         round($properties->food_income * ((time() - $this->last_check) / (float)3600)),
@@ -152,9 +162,8 @@ class User extends Authenticatable
                 );
             }
         }
-
         $this->addRes($res);
-        $this->last_check = time();
+        $this->setAttribute('last_check', time());
     }
 
     public function updateLastActive()

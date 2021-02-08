@@ -23,6 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|TrainTroop whereTroopId($value)
  * @method static Builder|TrainTroop whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\BaseTroop|null $baseTroop
  */
 class TrainTroop extends Model
 {

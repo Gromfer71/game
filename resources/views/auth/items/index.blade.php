@@ -17,7 +17,7 @@
                     <form action="{{ route('items.use') }}" method="POST">
                         @csrf
                         <label>
-                            <input class="uk-range" type='range' id="{{ $item->id }}" name="count" min='0' max='{{ $item->count }}' step='1' value='0'/>
+                            <input class="uk-range uk-margin-bottom" type='range' id="{{ $item->id }}" name="count" min='0' max='{{ $item->count }}' step='1' value='0'/>
                         </label>
                         <label for="id">
                             <input type="text" id="id" hidden value="{{ $item->id }}" name="id">

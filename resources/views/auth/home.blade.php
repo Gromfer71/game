@@ -11,11 +11,15 @@
                 <span class="">Строения</span>
             </a>
             <a href="{{ route('troops.index') }}" class="uk-button uk-button-primary uk-button-large uk-align-center uk-margin-small">
-                <span class="">Войска</span>
+                <span class="">Тренировать войска</span>
+            </a>
+            <a href="{{ route('troops.details') }}" class="uk-button uk-button-primary uk-button-large uk-align-center uk-margin-small">
+                <span class="">Мои войска</span>
             </a>
             <a href="{{ route('monsters.search') }}" class="uk-button uk-button-primary uk-button-large uk-align-center uk-margin-small">
                 <span class="">Монстры</span>
             </a>
+
         </div>
 {{--        <div class="content__links">--}}
 {{--            <a href="{{ route('online') }}">--}}

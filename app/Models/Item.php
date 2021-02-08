@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Item whereId($value)
  * @method static Builder|Item whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\BaseItem|null $baseItem
  */
 class Item extends Model
 {

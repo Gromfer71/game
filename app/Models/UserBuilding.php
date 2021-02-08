@@ -28,6 +28,9 @@ use Illuminate\Notifications\Notifiable;
  * @method static Builder|UserBuilding whereUpdatedAt($value)
  * @method static Builder|UserBuilding whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\Building|null $baseBuilding
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read int|null $notifications_count
  */
 class UserBuilding extends Model
 {
